@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#e4f4ff">
 <meta property="og:title" content="Peques · Diseña su body con su nombre en 3D">
 <meta property="og:description" content="Bodys, camisetas y baberos personalizados con su nombre. Diséñalos en 3D y pídelos por WhatsApp. Loja, Ecuador.">
-<meta name="description" content="Peques — bodys y ropa personalizada para bebé, 100% algodón. Diseños únicos hechos con amor en Loja, Ecuador. El regalo perfecto sí existe.">
+<meta name="description" content="Peques — bodys y ropa personalizada para bebé, muñecos tejidos y cajas de regalo. Diseños únicos hechos con amor en Loja, Ecuador. El regalo perfecto sí existe.">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
@@ -428,7 +428,7 @@ footer{background:var(--cream);}
 .bge-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
 .bge-row .chip{padding:8px 12px;font-size:12.5px;}
 
-.bd-modes{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:12px 14px 0;}
+.bd-modes{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:12px 14px 0;}
 .bd-modes button{border:2px solid var(--sky);background:#fff;border-radius:14px;padding:10px 4px;font:800 13px 'Nunito';color:var(--navy);cursor:pointer;line-height:1.2;}
 .bd-modes button.on{background:var(--pink2);border-color:#e0679a;color:#b24a79;}
 .bd-steps button b{font-weight:800;}
@@ -452,6 +452,77 @@ footer{background:var(--cream);}
 .sum-l.t{border-top:2px solid var(--sky2);margin-top:6px;padding-top:6px;font-size:15px;}
 .sum-l.dc{color:#27a567;}
 
+.tfp{margin-top:14px;background:var(--cream);border-radius:16px;padding:12px 14px;}
+.tfp h4{margin:0 0 8px!important;}
+.tfp .tf-el{display:flex;flex-wrap:wrap;gap:6px;}
+.tfp .tf-el button{border:2px solid var(--sky);background:#fff;border-radius:50px;padding:6px 12px;font:800 12.5px 'Nunito';color:var(--navy);cursor:pointer;}
+.tfp .tf-el button.on{background:var(--navy);border-color:var(--navy);color:#fff;}
+.tfp .tf-reset{margin-top:10px;}
+
+/* ═════════ ENTREGADOS ═════════ */
+.dlv{max-width:1180px;margin:58px auto 0;padding:0 22px;}
+.dlv-stats{display:flex;justify-content:center;gap:14px;margin-top:22px;flex-wrap:wrap;}
+.dlv-stats>div{background:#fff;border-radius:22px;padding:14px 26px;text-align:center;box-shadow:0 8px 22px rgba(47,85,150,.08);min-width:150px;}
+.dlv-stats b{display:block;font-family:'Fredoka';font-weight:700;font-size:38px;line-height:1;color:var(--navy);}
+.dlv-stats span{font-size:13px;font-weight:700;color:var(--muted);}
+.dlv-ribbon{overflow:hidden;margin:20px -22px 0;padding:10px 0;background:linear-gradient(90deg,var(--sky2),var(--pink2));-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.dlv-ribbon>div{display:inline-flex;gap:28px;white-space:nowrap;animation:dlvScroll 38s linear infinite;font-weight:800;color:var(--navy);font-size:14px;padding-left:28px;}
+@keyframes dlvScroll{to{transform:translateX(-50%);}}
+.dlv-cities{display:flex;gap:8px;overflow-x:auto;padding:16px 2px 6px;scrollbar-width:none;justify-content:safe center;}
+.dlv-cities::-webkit-scrollbar{display:none;}
+.dlv-cities button{flex:none;border:2px solid var(--sky);background:#fff;border-radius:50px;padding:8px 14px;font:800 13px 'Nunito';color:var(--navy);cursor:pointer;}
+.dlv-cities button small{font-weight:700;color:var(--muted);margin-left:4px;}
+.dlv-cities button.on{background:var(--navy);border-color:var(--navy);color:#fff;}
+.dlv-cities button.on small{color:rgba(255,255,255,.75);}
+.dlv-grid{columns:4 230px;column-gap:14px;margin-top:12px;}
+.dlv-c{break-inside:avoid;margin-bottom:14px;border-radius:22px;overflow:hidden;position:relative;cursor:pointer;background:#fff;box-shadow:0 10px 26px rgba(47,85,150,.1);display:block;width:100%;border:none;padding:0;text-align:left;font:inherit;
+  opacity:0;transform:translateY(14px);animation:dlvIn .5s ease forwards;}
+@keyframes dlvIn{to{opacity:1;transform:none;}}
+.dlv-c img{width:100%;display:block;transition:transform .5s;}
+.dlv-c:hover img{transform:scale(1.04);}
+.dlv-pin{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.94);border-radius:50px;padding:5px 11px;font-size:12.5px;font-weight:800;color:var(--navy);box-shadow:0 4px 10px rgba(0,0,0,.08);}
+.dlv-star{position:absolute;top:10px;right:10px;background:#fff6d6;border-radius:50px;padding:5px 9px;font-size:12px;font-weight:800;color:#a8790a;}
+.dlv-cap{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(transparent,rgba(20,38,78,.78));color:#fff;}
+.dlv-cap b{display:block;font-size:14.5px;line-height:1.25;}
+.dlv-cap span{font-size:12px;opacity:.85;font-weight:700;}
+.dlv-more{text-align:center;margin-top:6px;}
+#dlvBox{position:fixed;inset:0;z-index:200;background:rgba(20,38,78,.82);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:18px;}
+#dlvBox.open{display:flex;}
+.dlvb-in{background:#fff;border-radius:28px;max-width:940px;width:100%;max-height:92vh;display:grid;grid-template-columns:1.25fr 1fr;overflow:hidden;position:relative;}
+.dlvb-x{position:absolute;top:12px;right:12px;z-index:3;}
+.dlvb-ph{position:relative;background:#0f1d3d;display:flex;align-items:center;justify-content:center;min-height:300px;}
+.dlvb-ph img{max-width:100%;max-height:92vh;object-fit:contain;display:block;}
+.dlvb-nav{position:absolute;top:50%;left:10px;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,.9);font-size:26px;line-height:1;color:var(--navy);cursor:pointer;}
+.dlvb-nav.nx{left:auto;right:10px;}
+.dlvb-tx{padding:30px 26px;display:flex;flex-direction:column;gap:8px;overflow-y:auto;}
+.dlvb-pin{align-self:flex-start;background:var(--sky2);border-radius:50px;padding:6px 13px;font-weight:800;font-size:13px;color:var(--navy);}
+.dlvb-tx h3{font-family:'Fredoka';font-weight:600;font-size:24px;color:var(--navy);line-height:1.2;}
+.dlvb-d{font-size:13.5px;font-weight:700;color:var(--muted);}
+.dlvb-n{font-size:15px;color:var(--text);line-height:1.55;font-style:italic;}
+.dlvb-n:empty{display:none;}
+.dlvb-a{display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:14px;}
+.dlvb-a .btn{justify-content:center;}
+@media(max-width:760px){
+  .dlv-grid{columns:2;column-gap:10px;}
+  .dlv-c{margin-bottom:10px;border-radius:18px;}
+  .dlv-cap{padding:26px 10px 9px;}.dlv-cap b{font-size:13px;}
+  .dlv-stats>div{min-width:0;flex:1;padding:12px 10px;}.dlv-stats b{font-size:30px;}
+  #dlvBox{padding:0;}
+  .dlvb-in{grid-template-columns:1fr;border-radius:0;max-height:100%;height:100%;grid-template-rows:auto 1fr;overflow-y:auto;}
+  .dlvb-ph{min-height:0;}.dlvb-ph img{max-height:62vh;}
+  .dlvb-tx{padding:18px 18px calc(18px + env(safe-area-inset-bottom,0px));}
+}
+
+.dlv-cnt{position:absolute;right:10px;bottom:auto;top:44px;background:rgba(20,38,78,.72);color:#fff;border-radius:50px;padding:4px 10px;font-size:11.5px;font-weight:800;}
+.dlvb-ph video{max-width:100%;max-height:92vh;display:block;background:#000;}
+.dlvb-th{position:absolute;left:0;right:0;top:12px;display:flex;justify-content:center;gap:6px;padding:0 50px;flex-wrap:wrap;}
+.dlvb-th:empty{display:none;}
+.dlvb-th button{position:relative;width:46px;height:46px;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,.5);padding:0;cursor:pointer;background:#000;opacity:.75;}
+.dlvb-th button.on{border-color:#fff;opacity:1;}
+.dlvb-th img{width:100%;height:100%;object-fit:cover;}
+.dlvb-th i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-style:normal;font-size:14px;text-shadow:0 1px 3px #000;}
+@media(max-width:760px){.dlvb-ph video{max-height:62vh;}}
+
 button.filter-pill{font-family:'Nunito';}
 </style>
 </head>
@@ -468,6 +539,7 @@ button.filter-pill{font-family:'Nunito';}
     </a>
     <nav class="nav">
       <a href="#catalogo">Catálogo</a>
+      <a href="#entregados" data-dlv-link class="hidden">Entregados</a>
       <a href="#disena">Diséñalo en 3D</a>
       <a href="#como">Cómo pedir</a>
       <a href="#contacto">Contacto</a>
@@ -481,6 +553,7 @@ button.filter-pill{font-family:'Nunito';}
 </header>
 <div id="mobileMenu">
   <a href="#catalogo" onclick="closeMobileMenu()">Catálogo</a>
+  <a href="#entregados" onclick="closeMobileMenu()" data-dlv-link class="hidden">Entregados</a>
   <a href="#disena" onclick="closeMobileMenu()">Diséñalo en 3D</a>
   <a href="#como" onclick="closeMobileMenu()">Cómo pedir</a>
   <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
@@ -493,7 +566,6 @@ button.filter-pill{font-family:'Nunito';}
   <h1>Su nombre, en su primer body ✨</h1>
   <p class="hero-sub">Bodys con su nombre, muñecos tejidos a mano y cajas de regalo que armas tú. Míralo en 3D y pídelo por WhatsApp.</p>
   <div class="hero-badges">
-    <span class="hbadge">🧵 100% algodón</span>
     <span class="hbadge">🧶 Muñecos tejidos a mano</span>
     <span class="hbadge">📏 Tallas con medidas reales</span>
     <span class="hbadge">🚚 Envíos a todo Ecuador</span>
@@ -520,6 +592,20 @@ button.filter-pill{font-family:'Nunito';}
 <div class="filters"><div id="filterStrip"><div class="filter-pill active" data-filter="all">Todos</div></div></div>
 <div id="productsGrid"></div>
 <div id="moreWrap" class="hidden"><button class="btn btn-soft" id="moreBtn">Ver más productos</button></div>
+
+<!-- ENTREGADOS -->
+<section class="dlv hidden" id="entregados">
+  <div class="sec-head" style="padding:0">
+    <span class="tag">Entregados con amor</span>
+    <h2>Ya llegaron a sus peques 💙</h2>
+    <p>Algunos de los pedidos que hemos preparado y enviado. Toca una foto para verla en grande.</p>
+  </div>
+  <div class="dlv-stats"><div><b id="dlvN">0</b><span>pedidos entregados</span></div><div><b id="dlvC">0</b><span>ciudades</span></div></div>
+  <div class="dlv-ribbon" aria-hidden="true"><div id="dlvRibbon"></div></div>
+  <div class="dlv-cities" id="dlvCities" role="tablist" aria-label="Filtrar por ciudad"></div>
+  <div class="dlv-grid" id="dlvGrid"></div>
+  <div class="dlv-more hidden" id="dlvMoreW"><button class="btn btn-soft" id="dlvMore">Ver más entregas</button></div>
+</section>
 
 <!-- DISEÑADOR 3D -->
 <section class="ds" id="disena">
@@ -552,7 +638,7 @@ button.filter-pill{font-family:'Nunito';}
     </div>
     <div class="bd-panel">
       <div class="bd-modes" id="optMode" role="tablist" aria-label="Qué quieres armar">
-        <button data-v="ropa" class="on">👕 Ropa</button><button data-v="muneco">🧸 Muñeco tejido</button><button data-v="caja">🎁 Caja de regalo</button>
+        <button data-v="ropa" class="on">👕 Ropa</button><button data-v="muneco">🧸 Muñeco</button><button data-v="llavero">🔑 Llavero</button><button data-v="caja">🎁 Caja</button>
       </div>
       <div class="bd-steps" role="tablist">
         <button class="on" data-go="0"><span>1</span><b data-tab="0">Prenda</b></button>
@@ -581,7 +667,7 @@ button.filter-pill{font-family:'Nunito';}
           <div class="icons" id="optIcono"></div>
           <input type="file" id="inFoto" accept="image/png,image/webp,image/jpeg,image/*" class="hidden">
           <p class="note imgnote hidden" id="fotoNote"></p>
-          <div class="rng hidden" id="ctlFz"><label for="rFz">Tamaño de la imagen <b id="vFz"></b></label><div><input type="range" id="rFz" min="40" max="180" step="5"><button data-reset="fz:100" aria-label="Tamaño normal">↺</button></div></div>
+          <div class="tfp hidden" data-tfp="f"></div>
           <h4>Frase <small>opcional</small></h4>
           <label class="fld"><select id="inFraseSel" aria-label="Frase"></select></label>
           <label class="fld hidden" id="fraseOwnWrap" style="margin-top:8px"><input id="inFrase" type="text" placeholder="Escribe tu frase" aria-label="Tu frase"></label>
@@ -598,7 +684,7 @@ button.filter-pill{font-family:'Nunito';}
             <div class="chips" style="margin-top:10px"><button class="chip" id="backCopy">Usar el texto del frente</button><button class="chip" id="backImgBtn">🖼️ Subir imagen</button></div>
             <input type="file" id="inFotoB" accept="image/png,image/webp,image/jpeg,image/*" class="hidden">
             <p class="note imgnote hidden" id="imgNoteB"></p>
-            <div class="rng hidden" id="ctlBz"><label for="rBz">Tamaño de la imagen <b id="vBz"></b></label><div><input type="range" id="rBz" min="40" max="180" step="5"><button data-reset="bz:100" aria-label="Tamaño normal">↺</button></div></div>
+            <div class="tfp hidden" data-tfp="b"></div>
             <div class="rng hidden" id="ctlBy"><label for="rBy">Altura del estampado <b id="vBy"></b></label><div><input type="range" id="rBy" min="-30" max="30" step="2"><button data-reset="by:0" aria-label="Altura normal">↺</button></div></div>
             <p class="note">Usa el mismo color y letra del frente. Toca “↻ Ver espalda” para mirarla.</p>
           </div>
@@ -616,17 +702,19 @@ button.filter-pill{font-family:'Nunito';}
           <div class="chips" id="optAnimal"></div>
           <h4>Formato y tamaño <small>medida real</small></h4>
           <div class="chips" id="optFmt"></div>
+          <div id="ptWrap" class="hidden"><h4>Tentáculos</h4><div class="chips" id="optPt"></div></div>
           <p class="note">Tejidos a mano con lana suave de primera calidad, seguros para bebés.</p>
           <div class="bd-nav"><span></span><button class="btn btn-pri" data-go="1">Siguiente: colores</button></div>
         </div>
         <div class="bd-step" data-mode="muneco" data-step="1">
-          <h4>Color principal <small id="c1Name"></small></h4>
+          <div id="lnWrap"><h4>Tipo de lana</h4><div class="chips" id="optLn" style="margin-bottom:6px"></div></div>
+          <h4><span id="c1Label">Color principal</span> <small id="c1Name"></small></h4>
           <div class="sw" id="optC1"></div>
           <h4>Color de detalle <small id="c2Name"></small></h4>
           <p class="note" id="c2Help" style="margin-top:-4px"></p>
           <div class="sw" id="optC2"></div>
-          <h4>Accesorio</h4>
-          <div class="chips" id="optAcc"></div>
+          <div id="accWrap"><h4>Accesorio</h4>
+          <div class="chips" id="optAcc"></div></div>
           <div id="caWrap"><h4>Color del accesorio <small id="caName"></small></h4><div class="sw" id="optCa"></div></div>
           <div class="bd-nav"><button class="btn btn-soft" data-go="0">Atrás</button><button class="btn btn-pri" data-go="2">Siguiente: detalles</button></div>
         </div>
@@ -637,6 +725,41 @@ button.filter-pill{font-family:'Nunito';}
           <div class="qty"><button data-qd="-1" aria-label="Menos">−</button><span data-qv>1</span><button data-qd="1" aria-label="Más">+</button></div>
           <div class="bd-sum" id="sumM"></div>
           <button class="btn btn-soft" id="mToBox" style="margin-top:12px;width:100%;justify-content:center">🎁 Ponerlo en una caja de regalo</button>
+          <div class="bd-nav"><button class="btn btn-soft" data-go="1">Atrás</button><span></span></div>
+        </div>
+        <!-- LLAVERO -->
+        <div class="bd-step" data-mode="llavero" data-step="0">
+          <h4>Forma <small>medida real</small></h4>
+          <div class="chips" id="optLShape"></div>
+          <p class="note">Llaveros de MDF sublimados a todo color, con argolla y cadenita.</p>
+          <div class="bd-nav"><span></span><button class="btn btn-pri" data-go="1">Siguiente: diseño</button></div>
+        </div>
+        <div class="bd-step" data-mode="llavero" data-step="1">
+          <h4>Color de fondo <small id="lbgName"></small></h4>
+          <div class="sw" id="optLBg"></div>
+          <label class="xrow" style="margin-top:10px"><input type="checkbox" id="chkLBd"><span>Borde blanco alrededor</span></label>
+          <h4>Texto</h4>
+          <label class="fld"><textarea id="inLName" rows="1" autocomplete="off" aria-label="Texto del llavero"></textarea></label>
+          <p class="note" id="lNameCnt"></p>
+          <h4>Letra</h4>
+          <div class="chips" id="optLFuente"></div>
+          <h4>Color del texto <small id="lInkName"></small></h4>
+          <div class="sw" id="optLTinta"></div>
+          <h4>Dibujo o tu imagen</h4>
+          <div class="icons" id="optLIcono"></div>
+          <input type="file" id="inFotoL" accept="image/png,image/webp,image/jpeg,image/*" class="hidden">
+          <p class="note imgnote hidden" id="imgNoteL"></p>
+          <div class="tfp hidden" data-tfp="l"></div>
+          <div class="bd-nav"><button class="btn btn-soft" data-go="0">Atrás</button><button class="btn btn-pri" data-go="2">Siguiente: detalles</button></div>
+        </div>
+        <div class="bd-step" data-mode="llavero" data-step="2">
+          <div id="lBackWrap"><h4>Texto atrás <small id="lBackPrice"></small></h4>
+          <label class="fld"><textarea id="inLBack" rows="1" autocomplete="off" placeholder="Opcional. Ej. Te amo papá" aria-label="Texto atrás"></textarea></label>
+          <div class="tfp hidden" data-tfp="lb"></div></div>
+          <h4>Cantidad</h4>
+          <div class="qty"><button data-qd="-1" aria-label="Menos">−</button><span data-qv>1</span><button data-qd="1" aria-label="Más">+</button></div>
+          <div class="bd-sum" id="sumL"></div>
+          <button class="btn btn-soft" id="lToBox" style="margin-top:12px;width:100%;justify-content:center">🎁 Ponerlo en una caja de regalo</button>
           <div class="bd-nav"><button class="btn btn-soft" data-go="1">Atrás</button><span></span></div>
         </div>
         <!-- CAJA DE REGALO -->
@@ -658,10 +781,12 @@ button.filter-pill{font-family:'Nunito';}
             <button class="chip big" data-add-item="muneco"><i>🧸</i><span>Muñeco tejido</span></button>
             <button class="chip big" data-add-item="body"><i>👶</i><span>Body o ropa</span></button>
             <button class="chip big" data-add-item="taza"><i>☕</i><span>Taza para mamá</span></button>
+            <button class="chip big" data-add-item="llavero"><i>🔑</i><span>Llavero</span></button>
           </div>
           <div class="chips" style="margin-top:8px">
             <button class="chip" data-add-mine="ropa">＋ Mi diseño de ropa</button>
             <button class="chip" data-add-mine="muneco">＋ Mi muñeco diseñado</button>
+            <button class="chip" data-add-mine="llavero">＋ Mi llavero diseñado</button>
           </div>
           <div class="bd-nav"><button class="btn btn-soft" data-go="0">Atrás</button><button class="btn btn-pri" data-go="2">Siguiente: resumen</button></div>
         </div>
@@ -690,7 +815,7 @@ button.filter-pill{font-family:'Nunito';}
     <h2>Tu pedido en tres pasos</h2>
   </div>
   <ol>
-    <li><h3>Elige o diseña</h3><p>Agrega piezas del catálogo, diseña su ropa o su muñeco tejido, o arma tu caja de regalo en 3D.</p></li>
+    <li><h3>Elige o diseña</h3><p>Agrega piezas del catálogo, diseña su ropa, su muñeco tejido o un llavero, o arma tu caja de regalo en 3D.</p></li>
     <li><h3>Completa tus datos</h3><p>Quién recibe, dirección, fecha y forma de pago, en un solo formulario.</p></li>
     <li><h3>Envía y confirma</h3><p>Tu pedido llega a nuestro WhatsApp listo. Te enviamos el diseño para aprobar y coordinamos el pago.</p></li>
   </ol>
@@ -699,7 +824,7 @@ button.filter-pill{font-family:'Nunito';}
 <!-- FEATURES -->
 <section class="feats" id="nosotros">
   <div class="feat"><div class="ico">🧸</div><h3>Hechos a mano</h3><p>Cada pieza se prepara una por una en Loja.</p></div>
-  <div class="feat"><div class="ico">🌿</div><h3>100% algodón</h3><p>Tela suave y segura para la piel del bebé.</p></div>
+  <div class="feat"><div class="ico">🧶</div><h3>Tejidos a mano</h3><p>Muñecos y sonajeros hechos punto por punto.</p></div>
   <div class="feat"><div class="ico">✏️</div><h3>Personalizado</h3><p>Nombre, dibujo y frase a tu elección.</p></div>
   <div class="feat"><div class="ico">🚚</div><h3>Envíos nacionales</h3><p>Llevamos tus sorpresas a todo el país.</p></div>
 </section>
@@ -851,6 +976,21 @@ button.filter-pill{font-family:'Nunito';}
   </div>
 </div>
 
+<!-- FOTO DE ENTREGA -->
+<div id="dlvBox" role="dialog" aria-modal="true" aria-labelledby="dlvT">
+  <div class="dlvb-in">
+    <button class="x dlvb-x" id="dlvClose" aria-label="Cerrar">×</button>
+    <div class="dlvb-ph" id="dlvStage"><img id="dlvImg" alt=""><video id="dlvVid" class="hidden" controls playsinline loop preload="metadata"></video><div class="dlvb-th" id="dlvThumbs"></div><button class="dlvb-nav" id="dlvPrev" aria-label="Anterior">‹</button><button class="dlvb-nav nx" id="dlvNext" aria-label="Siguiente">›</button></div>
+    <div class="dlvb-tx">
+      <span class="dlvb-pin" id="dlvPin"></span>
+      <h3 id="dlvT"></h3>
+      <p class="dlvb-d" id="dlvD"></p>
+      <p class="dlvb-n" id="dlvNote"></p>
+      <div class="dlvb-a"><a class="btn btn-wa" id="dlvWa" href="#" target="_blank" rel="noopener">💬 Quiero uno así</a><button class="btn btn-soft" id="dlvDesign">🎨 Diseñar el mío</button></div>
+    </div>
+  </div>
+</div>
+
 <div id="toast" role="status" aria-live="polite"></div>
 </div><!-- /wrap -->
 
@@ -930,24 +1070,32 @@ const DEF_CFG = {
     jirafa:{label:'Jirafa',e:'🦒',c1:'Amarillo',c2:'Café',on:true},
     leon:{label:'León',e:'🦁',c1:'Café claro',c2:'Café',on:true},
     elefante:{label:'Elefante',e:'🐘',c1:'Gris',c2:'Rosa',on:true},
-    gato:{label:'Gatito',e:'🐱',c1:'Gris',c2:'Blanco',on:true}
+    gato:{label:'Gatito',e:'🐱',c1:'Gris',c2:'Blanco',on:true},
+    perrito:{label:'Perrito',e:'🐶',c1:'Celeste',c2:'Negro',on:true},
+    torito:{label:'Vaquita café',e:'🐂',c1:'Beige',c2:'Negro',on:true},
+    pulpo:{label:'Pulpo',e:'🐙',c1:'Turquesa',c2:'Azul',ln:'felpa',fmts:['chico','mediano','grande'],on:true},
+    bombero:{label:'Bombero',e:'🧑‍🚒',c1:'Rojo',c2:'Amarillo',fmts:['mediano','grande'],on:true}
   },
+  pulpoEstilos:{rectos:{label:'Tentáculos sueltos',on:true},rizados:{label:'Rizados (de apego)',on:true},patitas:{label:'Patitas largas',on:true}},
+  lanaFelpa:{label:'Lana felpa (chenille)',precio:2,on:true},
   formatos:{
     llavero:{label:'Llavero',alto:8,precio:5,on:true},
     sonajero:{label:'Sonajero con aro de madera',alto:14,precio:8,on:true},
     chico:{label:'Pequeño',alto:15,precio:10,on:true},
     mediano:{label:'Mediano',alto:20,precio:13,on:true},
-    grande:{label:'Grande',alto:25,precio:15,on:true}
+    grande:{label:'Grande',alto:25,precio:15,on:true},
+    apego:{label:'Mantita de apego',alto:25,precio:14,on:true}
   },
   lanas:{
     'Crema':{hex:'#f3e7d3',on:true},'Blanco':{hex:'#fbfaf6',on:true},'Rosa':{hex:'#f2b3c8',on:true},'Celeste':{hex:'#a7cfee',on:true},
     'Amarillo':{hex:'#f2c234',on:true},'Gris':{hex:'#b9bbc3',on:true},'Café claro':{hex:'#d8b088',on:true},'Café':{hex:'#7d4f33',on:true},
-    'Negro':{hex:'#2a2a2e',on:true},'Lila':{hex:'#c7b3ea',on:true},'Menta':{hex:'#a5dbc2',on:true},'Rojo':{hex:'#d6423f',on:true}
+    'Negro':{hex:'#2a2a2e',on:true},'Beige':{hex:'#c8ab8b',on:true},'Turquesa':{hex:'#7cc4c6',on:true},'Azul':{hex:'#2f6db3',on:true},'Azul lavanda':{hex:'#7086c8',on:true},'Naranja':{hex:'#c4602e',on:true},'Lila':{hex:'#c7b3ea',on:true},'Menta':{hex:'#a5dbc2',on:true},'Rojo':{hex:'#d6423f',on:true}
   },
   accesorios:{
     ninguno:{label:'Sin accesorio',precio:0,on:true},
     mono:{label:'Moñito',precio:0,on:true},
-    bufanda:{label:'Bufanda',precio:1,on:true}
+    bufanda:{label:'Bufanda',precio:1,on:true},
+    flor:{label:'Girasol',precio:1,on:true}
   },
   etiquetaNombre:{label:'Etiqueta con su nombre',precio:1,on:true},
   /* ── Cajas de regalo ── */
@@ -956,12 +1104,28 @@ const DEF_CFG = {
     m:{label:'Caja mediana',ancho:25,fondo:25,alto:11,cap:6,precio:4,on:true},
     l:{label:'Caja grande',ancho:32,fondo:26,alto:12,cap:9,precio:5,on:true}
   },
-  espacio:{body:2,babero:1,taza:2,llavero:1,sonajero:1,chico:2,mediano:3,grande:4},
+  espacio:{body:2,babero:1,taza:2,llavero:1,sonajero:1,chico:2,mediano:3,grande:4,apego:3,llaveroMdf:1},
   rellenos:{'Kraft':{hex:'#cfae82',on:true},'Blanco':{hex:'#f4f1ea',on:true},'Rosa':{hex:'#f3c3d3',on:true},'Celeste':{hex:'#bcdaf1',on:true}},
   lazos:{'Celeste':{hex:'#8cc3ea',on:true},'Rosa':{hex:'#f29bb8',on:true},'Dorado':{hex:'#d4ad4a',on:true},'Blanco':{hex:'#ffffff',on:true}},
   taza:{label:'Taza personalizada',precio:8,on:true},
   tazaColores:{'Rosa':{hex:'#f2a7c0',on:true},'Celeste':{hex:'#9cc9ec',on:true},'Blanco':{hex:'#ffffff',on:true},'Lila':{hex:'#c5b0ea',on:true}},
   setRegalo:{descuento:10,minItems:3,tarjeta:true},
+  /* ── Llaveros sublimados (MDF) ── medidas en cm */
+  llaveros:{
+    ovalo:{label:'Óvalo',w:4.4,h:6,precio:3,on:true},
+    circulo:{label:'Círculo',w:5,h:5,precio:3,on:true},
+    cuadrado:{label:'Cuadrado',w:4.8,h:4.8,precio:3,on:true},
+    rombo:{label:'Rombo',w:5.6,h:5.6,precio:3,on:true},
+    corazon:{label:'Corazón',w:5.4,h:5,precio:3,on:true},
+    corazonG:{label:'Corazón geométrico',w:5,h:4.8,precio:3,on:true},
+    rectangulo:{label:'Rectángulo',w:3.4,h:6.4,precio:3,on:true},
+    hueso:{label:'Hueso',w:6.2,h:3.2,precio:3,on:true},
+    camiseta:{label:'Camiseta',w:5.4,h:5.4,precio:3,on:true},
+    casa:{label:'Casita',w:5,h:5.2,precio:3,on:true}
+  },
+  llaveroFondos:{'Celeste':{hex:'#5cc1e8',on:true},'Lila':{hex:'#b7a2e2',on:true},'Amarillo':{hex:'#f6e07a',on:true},'Menta':{hex:'#7fd3a6',on:true},
+    'Rosa':{hex:'#f4a6c2',on:true},'Naranja':{hex:'#f6b35c',on:true},'Blanco':{hex:'#ffffff',on:true}},
+  llaveroReverso:{label:'Texto también atrás',precio:1,on:true},
   tienda:{
     produccionDias:2,
     entregas:[
@@ -1087,7 +1251,7 @@ function openModal(id){
   const p=findP(id);if(!p)return;modalP=p;modalQ=1;$('mqVal').textContent='1';
   $('modalImgSide').innerHTML=`<button class="modal-close" onclick="closeModal()" aria-label="Cerrar">×</button>${p.photo?`<img src="${esc(p.photo)}" alt="${esc(p.name)}" style="width:100%;height:100%;object-fit:cover;">`:`<div class="ph">🧸</div>`}`;
   $('modalTag').textContent=p.tag||BIZ.name;$('modalName').textContent=p.name;
-  $('modalDesc').textContent='Pieza hecha con amor, 100% algodón. Hecho en Loja, Ecuador.';
+  $('modalDesc').textContent='Pieza hecha con amor en Loja, Ecuador.';
   $('modalStock').innerHTML=stockBadge(p.stock,'modal');$('modalPrice').textContent=money(p.price);
   const out=p.stock!=null&&p.stock<=0;$('modalAdd').disabled=out;$('modalAdd').textContent=out?'Agotado':'Agregar al carrito';
   $('modalWa').href=waLink(`¡Hola ${BIZ.name}! Me interesa: *${p.name}* (${money(p.price)}) 💙\n${productUrl(p.id)}`);
@@ -1166,7 +1330,7 @@ function garmentPath(P,type,W,L){
 /* ════════════ MOTOR 3D (three.js r128) ════════════ */
 window.PQ3D=(function(){
   const E={ready:false};
-  let R,scene,cam,ctl,host,G,garMesh,trims=[],snaps=null,shadow,mFront,mBack,frontCv,backCv,frontTex,backTex,measure,info,geoKey='',needs=true,turnTo=null,measureOn=true,imgCache={},curImgs={f:null,b:null},curS=null,P=null,mode='ropa',prodKey='',logoImg=null,pinfo=null;
+  let R,scene,cam,ctl,host,G,garMesh,trims=[],snaps=null,shadow,mFront,mBack,frontCv,backCv,frontTex,backTex,measure,info,geoKey='',needs=true,turnTo=null,measureOn=true,lastApego=false,imgCache={},curImgs={f:null,b:null},curS=null,P=null,mode='ropa',prodKey='',logoImg=null,pinfo=null;
   const FRONT_PX=1024,DEPTH=0.5,BEVEL=0.6,ZF=DEPTH/2+BEVEL;
   const rib=(()=>{const c=document.createElement('canvas');c.width=c.height=64;const x=c.getContext('2d');x.fillStyle='#808080';x.fillRect(0,0,64,64);
     for(let i=0;i<64;i+=4){x.fillStyle='rgba(255,255,255,.35)';x.fillRect(i,0,2,64);x.fillStyle='rgba(0,0,0,.25)';x.fillRect(i+2,0,1,64);}
@@ -1263,41 +1427,62 @@ window.PQ3D=(function(){
     layoutPrint(sq,{k:it.k,f:it.f||'cursiva'},{emoji:it.i&&CFG.iconos[it.i]?CFG.iconos[it.i].e:'',lines:String(it.txt||'').split('\n').map(l=>l.trim()).filter(Boolean)});
     x.drawImage(sq,cx-320,cy-320);
   }
+  function llaveroDraw(it,img){return (cv,o)=>{
+    const x=cv.getContext('2d'),bg=(CFG.llaveroFondos[it.bg]||{hex:'#ffffff'}).hex;x.fillStyle='#ffffff';x.fillRect(0,0,cv.width,cv.height);
+    x.beginPath();o.poly.forEach((p,i)=>i?x.lineTo(p[0],p[1]):x.moveTo(p[0],p[1]));x.closePath();x.fillStyle=bg;x.fill();
+    if(it.bd){x.lineWidth=.5*o.k;x.strokeStyle='#ffffff';x.lineJoin='round';x.stroke();}
+    const ar=({corazon:{cy:.55,sc:.78},corazonG:{cy:.58,sc:.72},casa:{cy:.62,sc:.78},camiseta:{cy:.6,sc:.72},rombo:{cy:.55,sc:.66},hueso:{cy:.62,sc:.85},
+      circulo:{cy:.56,sc:.82},ovalo:{cy:.56,sc:.82},cuadrado:{cy:.56,sc:.84},rectangulo:{cy:.57,sc:.9}})[it.sh]||{cy:.56,sc:.85};
+    const st0={k:it.k,f:it.f||'redonda'},L=t=>String(t||'').split('\n').map(l=>l.trim()).filter(Boolean);
+    if(!o.back)layoutPrint(cv,st0,{keep:true,area:ar,img,emoji:!img&&it.i&&it.i!=='foto'&&CFG.iconos[it.i]?CFG.iconos[it.i].e:'',lines:L(it.n),tf:it.tf});
+    else if(L(it.nb).length)layoutPrint(cv,st0,{keep:true,area:ar,lines:L(it.nb),tf:it.tfb});
+    // agujero
+    x.fillStyle='#ffffff';x.beginPath();x.arc(o.hole[0],o.hole[1],.32*o.k,0,Math.PI*2);x.fill();
+  };}
   function itemObj(it){
     if(it.t==='muneco')return PQB.muneco(it);
     if(it.t==='taza')return PQB.taza(it,mugText);
     if(it.t==='body')return PQB.doblado(it,bodyPrint);
+    if(it.t==='llavero'){const w=new THREE.Group(),o=PQB.llavero(it,llaveroDraw(it,null));o.rotation.x=-.22;w.add(o);return w;}
     return new THREE.Group();
   }
   function updateProduct(s,changedMode){
-    const key=JSON.stringify(mode==='muneco'?s.m:s.b);
-    if(key===prodKey&&!changedMode)return;const first=!prodKey||changedMode;prodKey=key;clearP();
+    const key=JSON.stringify(mode==='muneco'?s.m:mode==='llavero'?[s.l,curImgs.l]:s.b);
+    if(key===prodKey&&!changedMode)return;const ap=mode==='muneco'&&s.m.fmt==='apego';const first=!prodKey||changedMode||ap!==lastApego;lastApego=ap;prodKey=key;clearP();
     let el=document.getElementById('printInfo');
-    if(mode==='muneco'){
+    if(mode==='llavero'){
+      const img=s.l.i==='foto'?getImg(curImgs.l):null,o=PQB.llavero(s.l,llaveroDraw(s.l,img));
+      let bb=new THREE.Box3().setFromObject(o);o.position.y-=bb.min.y-.2;P.add(o);const L=CFG.llaveros[s.l.sh];
+      pinfo={kw:+L.w,kh:+L.h,top:(bb.max.y-bb.min.y)};shadow.scale.set(L.w*1.8,L.w*.8,1);shadow.position.set(0,.02,0);
+      if(el)el.textContent=`Llavero ${L.label.toLowerCase()} · ${L.w} × ${L.h} cm`;
+    }else if(mode==='muneco'){
       const o=PQB.muneco(Object.assign({t:'muneco'},s.m));P.add(o);const b=new THREE.Box3().setFromObject(o),sz=b.getSize(new THREE.Vector3());
       pinfo={h:(CFG.formatos[s.m.fmt]||{}).alto||Math.round(sz.y),w:sz.x,d:sz.z,b};
       shadow.scale.set(sz.x*1.6,sz.z*1.6,1);shadow.position.set(0,.02,0);
-      if(el)el.textContent=`Alto aprox. ${pinfo.h} cm · ${CFG.formatos[s.m.fmt].label}`;
+      pinfo.apego=s.m.fmt==='apego';pinfo.lh=sz.y;if(el)el.textContent=pinfo.apego?`Mantita de apego aprox. ${pinfo.h} × ${pinfo.h} cm`:s.m.a==='pulpo'?`Pulpo aprox. ${pinfo.h} cm de punta a punta · ${Math.round(sz.y)} cm de alto`:`Alto aprox. ${pinfo.h} cm · ${CFG.formatos[s.m.fmt].label}`;
     }else{
       const B=Object.assign({},CFG.cajas[s.b.size],{rel:s.b.rel,lazo:s.b.lazo}),box=PQB.caja(B,logoImg&&logoImg.complete?logoImg:null),U=box.userData;P.add(box);
       // acomodo: ropa doblada apoyada atrás; muñecos y tazas adelante
       const items=(s.b.items||[]).map(it=>({it,o:itemObj(it)}));
-      const back=items.filter(x=>x.it.t==='body'),frontI=items.filter(x=>x.it.t!=='body');
+      const back=items.filter(x=>x.it.t==='body'),keys=[],frontI=items.filter(x=>x.it.t!=='body');
       const inner=B.ancho-2*U.th-1;
       back.forEach((x,i)=>{const n=back.length,dd=x.o.userData,span=Math.max(0,inner-dd.w),px=n>1?-span/2+span*i/(n-1):0;
         const th=1.0-i*.08;x.o.rotation.x=th;x.o.rotation.y=(n>1?(i-(n-1)/2)*-.12:0);x.o.position.set(px,U.fy+dd.d/2*Math.sin(th)*.55+i*.3,-B.fondo/2+U.th+dd.d/2*Math.cos(th)+dd.h+.6+i*1.4);P.add(x.o);});
+      // llaveros recostados sobre el papel, en el centro de la caja
+      keys.forEach((x,i)=>{const n=keys.length,span=Math.min(inner-6,n*6.2),px=n>1?-span/2+span*i/(n-1):0;
+        x.o.rotation.z=(i%2?.18:-.14);x.o.position.set(px,U.fy+1.6,-B.fondo*.02+(i%2)*1.2);P.add(x.o);});
       const rows=[[]];let used=0;
       frontI.forEach(x=>{const w=new THREE.Box3().setFromObject(x.o).getSize(new THREE.Vector3()).x;if(used+w>inner&&rows[rows.length-1].length){rows.push([]);used=0;}rows[rows.length-1].push({x,w});used+=w+.4;});
       rows.forEach((row,ri)=>{const tot=row.reduce((a,b)=>a+b.w,0)+(row.length-1)*.4;let cx=-tot/2;
         row.forEach(r=>{const dz=new THREE.Box3().setFromObject(r.x.o).getSize(new THREE.Vector3()).z;
-          r.x.o.position.set(cx+r.w/2,U.fy-.9-ri*.3,B.fondo/2-U.th-dz/2-1-ri*Math.min(7,B.fondo*.28));
+          r.x.o.position.set(cx+r.w/2,r.x.it.t==='llavero'?B.alto-.6:U.fy-.9-ri*.3,B.fondo/2-U.th-dz/2-1-ri*Math.min(7,B.fondo*.28));
           if(r.x.it.t==='taza')r.x.o.rotation.y=-.5;cx+=r.w+.4;P.add(r.x.o);});});
       pinfo={W:B.ancho,D:B.fondo,H:B.alto};
       shadow.scale.set(B.ancho*1.7,B.fondo*1.7,1);shadow.position.set(0,.02,0);
       if(el)el.textContent=`${B.label} · ${B.ancho} × ${B.fondo} × ${B.alto} cm`;
     }
     buildMeasureP();
-    if(first){const el=mode==='caja'?.68:.16,az0=mode==='caja'?.32:.28,d=cam.position.distanceTo(ctl.target)||100;
+    if(first){const el=mode==='caja'?.68:mode==='llavero'?.06:lastApego?.85:.16,az0=mode==='caja'?.32:mode==='llavero'?.2:.28,d=cam.position.distanceTo(ctl.target)||100;
       cam.position.set(ctl.target.x+Math.sin(az0)*Math.cos(el)*d,ctl.target.y+Math.sin(el)*d,ctl.target.z+Math.cos(az0)*Math.cos(el)*d);fit();}
     needs=true;
   }
@@ -1305,7 +1490,14 @@ window.PQ3D=(function(){
     measure.children.slice().forEach(c=>{measure.remove(c);if(c.material&&c.material.map)c.material.map.dispose();});
     if(!pinfo)return;const mat=new THREE.LineBasicMaterial({color:0x2f5596,depthTest:false,transparent:true,opacity:.9});
     const line=pts=>{const l=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts.map(p=>new THREE.Vector3(...p))),mat);l.renderOrder=9;measure.add(l);};
-    if(mode==='muneco'){const x=pinfo.w/2+2.2,h=pinfo.h,t=.6;line([[x-t,0,0],[x+t,0,0]]);line([[x,0,0],[x,h,0]]);line([[x-t,h,0],[x+t,h,0]]);
+    if(mode==='llavero'){const {kw,kh}=pinfo,t=.25,y0=.2;
+      line([[-kw/2,y0-.6,.6],[kw/2,y0-.6,.6]]);line([[-kw/2,y0-.6-t,.6],[-kw/2,y0-.6+t,.6]]);line([[kw/2,y0-.6-t,.6],[kw/2,y0-.6+t,.6]]);
+      const l1=label(`${kw} cm`);l1.scale.set(1.7,.51,1);l1.position.set(0,y0-1.15,.6);measure.add(l1);
+      const xr=kw/2+.8;line([[xr,y0,.6],[xr,y0+kh,.6]]);line([[xr-t,y0,.6],[xr+t,y0,.6]]);line([[xr-t,y0+kh,.6],[xr+t,y0+kh,.6]]);
+      const l2=label(`${kh} cm`);l2.scale.set(1.7,.51,1);l2.position.set(xr+1.15,y0+kh/2,.6);measure.add(l2);}
+    else if(mode==='muneco'&&pinfo.apego){const W=pinfo.w,z=pinfo.b.max.z+1.5,t=.6;line([[-W/2,.2,z],[W/2,.2,z]]);line([[-W/2,.2,z-t],[-W/2,.2,z+t]]);line([[W/2,.2,z-t],[W/2,.2,z+t]]);
+      const l=label(`${pinfo.h} cm`);l.scale.set(W*.3,W*.09,1);l.position.set(0,1.6,z+1.5);measure.add(l);}
+    else if(mode==='muneco'){const x=pinfo.w/2+2.2,h=Math.round(pinfo.lh||pinfo.h),t=.6;line([[x-t,0,0],[x+t,0,0]]);line([[x,0,0],[x,h,0]]);line([[x-t,h,0],[x+t,h,0]]);
       const l=label(`alto ${h} cm`);const sc=Math.max(4.5,h*.3);l.scale.set(sc,sc*.3,1);l.position.set(x,h/2,0);measure.add(l);}
     else{const {W,D,H}=pinfo,z=D/2+1.6,t=.8;line([[-W/2,0,z],[W/2,0,z]]);line([[-W/2,-t,z],[-W/2,t,z]]);line([[W/2,-t,z],[W/2,t,z]]);
       const l1=label(`ancho ${W} cm`);l1.scale.set(W*.3,W*.09,1);l1.position.set(0,-2.2,z);measure.add(l1);
@@ -1338,48 +1530,58 @@ window.PQ3D=(function(){
   function fontOf(s){const F=CFG.fuentes[s.f]||{font:'Fredoka',weight:600};return F;}
   function getImg(src){
     if(!src)return null;const c=imgCache[src];if(c)return c.ok?c.im:null;
-    const im=new Image();imgCache[src]={im,ok:false};im.onload=()=>{imgCache[src].ok=true;if(curS&&mode==='ropa')drawPrints(curS);};im.src=src;return null;
+    const im=new Image();imgCache[src]={im,ok:false};im.onload=()=>{imgCache[src].ok=true;if(!curS)return;if(mode==='ropa')drawPrints(curS);else{prodKey='';update(curS,curImgs);}};im.src=src;return null;
   }
   /* Dibuja un estampado (imagen/dibujo + líneas de texto + frase) en un lienzo cuadrado.
      Devuelve el tamaño ocupado como fracción del lienzo. */
+  /* Estampado: imagen/dibujo + texto + frase. Cada elemento admite tamaño y posición propios:
+     o.tf={pic:{s,x,y},txt:{s,x,y},fr:{s,x,y}}  (s en %, x/y en % del lado menor; y positiva = arriba).
+     Funciona en lienzos cuadrados o rectangulares (llaveros). */
   function layoutPrint(cv,s,o){
-    const x=cv.getContext('2d'),N=cv.width;x.clearRect(0,0,N,N);
-    const ink=inkHex(s),F=fontOf(s),maxW=N*.94,lines=(o.lines||[]).filter(Boolean),fr=o.frase||'',items=[];
+    const x=cv.getContext('2d'),A=o.area||{cy:.5,sc:1},CW=cv.width,CH=cv.height,N=Math.min(CW,CH)*(A.sc||1);if(!o.keep)x.clearRect(0,0,cv.width,cv.height);
+    const ink=o.ink||inkHex(s),F=fontOf(s),maxW=N*.94,lines=(o.lines||[]).filter(Boolean),fr=o.frase||'',items=[],TF=o.tf||{};
     const pic=o.img||null,emo=!pic&&o.emoji?o.emoji:'';
     if(!pic&&!emo&&!lines.length&&!fr)return {w:0,h:0};
     const nL=lines.length,picH=N*(nL?(nL===1?.42:nL===2?.36:.3)*(fr?.9:1):fr?.62:.82);
-    if(pic){const sc=(o.scale||100)/100,k=Math.min(maxW*Math.max(1,sc)/pic.width,picH*sc/pic.height,N*.98/pic.width);items.push({k:'pic',w:pic.width*k,h:pic.height*k});}
-    else if(emo)items.push({k:'emo',h:N*(nL?(nL===1?.36:.3):fr?.5:.62)});
+    if(pic){const k=Math.min(maxW/pic.width,picH/pic.height);items.push({k:'pic',g:'pic',w:pic.width*k,h:pic.height*k});}
+    else if(emo){const z=N*(nL?(nL===1?.36:.3):fr?.5:.62);items.push({k:'emo',g:'pic',w:z*.95,h:z});}
     if(nL){
       const fnt=z=>`${F.weight} ${z}px "${F.font}", "Fredoka", sans-serif`,lh=F.font==='Pacifico'?1.32:1.1;
       let fs=N*((pic||emo)?[.22,.16,.12][nL-1]:[.3,.2,.15][nL-1]);x.font=fnt(fs);
       const widest=()=>Math.max(...lines.map(l=>x.measureText(l).width));
       while(widest()>maxW&&fs>N*.05){fs*=.94;x.font=fnt(fs);}
-      lines.forEach(l=>{x.font=fnt(fs);items.push({k:'txt',t:l,h:fs*lh,fs,fnt:fnt(fs),w:x.measureText(l).width,pac:F.font==='Pacifico'});});
+      lines.forEach(l=>{x.font=fnt(fs);items.push({k:'txt',g:'txt',t:l,h:fs*lh,fs,ff:F,w:x.measureText(l).width,pac:F.font==='Pacifico'});});
     }
-    if(fr){let fs=N*.085;const fnt=z=>`800 ${z}px "Nunito", sans-serif`;x.font=fnt(fs);while(x.measureText(fr).width>maxW&&fs>N*.035){fs*=.95;x.font=fnt(fs);}items.push({k:'txt',t:fr,h:fs*1.3,fs,fnt:fnt(fs),w:x.measureText(fr).width,gap:true});}
+    if(fr){let fs=N*.085;x.font=`800 ${fs}px "Nunito", sans-serif`;while(x.measureText(fr).width>maxW&&fs>N*.035){fs*=.95;x.font=`800 ${fs}px "Nunito", sans-serif`;}
+      items.push({k:'txt',g:'fr',t:fr,h:fs*1.3,fs,ff:{font:'Nunito',weight:800},w:x.measureText(fr).width,gap:true});}
     const gapOf=(a,b)=>!b?0:(a.k==='txt'&&b.k==='txt'&&!b.gap?0:N*.025);
     let H=0;items.forEach((it,i)=>{H+=it.h+gapOf(it,items[i+1]);});
-    if(H>N*.98){const f=N*.98/H;H=0;items.forEach(it=>{it.h*=f;if(it.w)it.w*=f;if(it.fs){it.fnt=it.fnt.replace(/[\d.]+px/,(it.fs*=f)+'px');}});items.forEach((it,i)=>{H+=it.h+gapOf(it,items[i+1]);});}
-    let y=(N-H)/2,wMax=0;
-    items.forEach((it,i)=>{
-      const cy=y+it.h/2;
-      if(it.k==='pic'){x.drawImage(pic,(N-it.w)/2,y,it.w,it.h);wMax=Math.max(wMax,it.w);}
-      else if(it.k==='emo'){x.font=`${it.h*.86}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`;x.textAlign='center';x.textBaseline='middle';x.fillText(emo,N/2,cy+it.h*.04);wMax=Math.max(wMax,it.h*.95);}
-      else{x.font=it.fnt;x.fillStyle=ink;x.textAlign='center';x.textBaseline='middle';x.fillText(it.t,N/2,cy+(it.pac?-it.fs*.06:0));wMax=Math.max(wMax,it.w);}
-      y+=it.h+gapOf(it,items[i+1]);
+    if(H>N*.98){const f=N*.98/H;H=0;items.forEach(it=>{it.h*=f;it.w*=f;if(it.fs)it.fs*=f;});items.forEach((it,i)=>{H+=it.h+gapOf(it,items[i+1]);});}
+    // posición automática (centrada) de cada elemento
+    let y=Math.max(0,Math.min(CH-H,CH*(A.cy||.5)-H/2));items.forEach((it,i)=>{it.cx=CW/2;it.cy=y+it.h/2;y+=it.h+gapOf(it,items[i+1]);});
+    // ajustes del cliente por grupo: tamaño respecto al centro del grupo + desplazamiento
+    const G={};items.forEach(it=>{const g=G[it.g]||(G[it.g]={y0:1e9,y1:-1e9});g.y0=Math.min(g.y0,it.cy-it.h/2);g.y1=Math.max(g.y1,it.cy+it.h/2);});
+    let bx0=1e9,by0=1e9,bx1=-1e9,by1=-1e9;
+    items.forEach(it=>{
+      const t=TF[it.g]||{},sc=(t.s||100)/100,gc=(G[it.g].y0+G[it.g].y1)/2,dx=(t.x||0)/100*N,dy=-(t.y||0)/100*N;
+      const cx=it.cx+dx,cy=gc+(it.cy-gc)*sc+dy,w=it.w*sc,h=it.h*sc;
+      if(it.k==='pic'){x.drawImage(pic,cx-w/2,cy-h/2,w,h);}
+      else if(it.k==='emo'){x.font=`${h*.86}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`;x.textAlign='center';x.textBaseline='middle';x.fillText(emo,cx,cy+h*.04);}
+      else{const fs=it.fs*sc;x.font=`${it.ff.weight} ${fs}px "${it.ff.font}", "Fredoka", sans-serif`;x.fillStyle=ink;x.textAlign='center';x.textBaseline='middle';x.fillText(it.t,cx,cy+(it.pac?-fs*.06:0));}
+      bx0=Math.min(bx0,cx-w/2);bx1=Math.max(bx1,cx+w/2);by0=Math.min(by0,cy-h/2);by1=Math.max(by1,cy+h/2);
     });
-    return {w:wMax/N,h:H/N};
+    bx0=Math.max(0,bx0);by0=Math.max(0,by0);bx1=Math.min(cv.width,bx1);by1=Math.min(cv.height,by1);
+    return {w:Math.max(0,bx1-bx0)/N,h:Math.max(0,by1-by0)/N};
   }
   const splitLines=t=>String(t||'').split('\n').map(l=>l.trim()).filter(Boolean);
   function drawPrints(s){
     if(!info)return;const {W,L}=info;
     const small=s.pos==='izq'&&s.p!=='babero',size=small?W*.3:info.printW;
     const fImg=s.i==='foto'?getImg(curImgs.f):null,emoji=s.i&&s.i!=='foto'&&CFG.iconos[s.i]?CFG.iconos[s.i].e:'';
-    const fr=layoutPrint(frontCv,s,{img:fImg,scale:s.fz,emoji,lines:splitLines(s.n),frase:small&&splitLines(s.n).length?'':s.fr});frontTex.needsUpdate=true;
+    const fr=layoutPrint(frontCv,s,{img:fImg,tf:(s.tf||{}).f,emoji,lines:splitLines(s.n),frase:small&&splitLines(s.n).length?'':s.fr});frontTex.needsUpdate=true;
     mFront.scale.set(size,size,1);mFront.position.set(small?W*.2:0,(small?info.leftY:info.chestY)+(s.fy||0)/100*size,ZF+.03);mFront.visible=fr.w>0;
     const bImg=s.ib?getImg(curImgs.b):null,bl=splitLines(s.nb);
-    const bsize=info.printW*1.1,br=(bl.length||bImg)?layoutPrint(backCv,s,{img:bImg,scale:s.bz,lines:bl}):(backCv.getContext('2d').clearRect(0,0,FRONT_PX,FRONT_PX),{w:0,h:0});backTex.needsUpdate=true;
+    const bsize=info.printW*1.1,br=(bl.length||bImg)?layoutPrint(backCv,s,{img:bImg,tf:(s.tf||{}).b,lines:bl}):(backCv.getContext('2d').clearRect(0,0,FRONT_PX,FRONT_PX),{w:0,h:0});backTex.needsUpdate=true;
     mBack.scale.set(bsize,bsize,1);mBack.position.set(0,(s.p==='babero'?0:L/2-.36*L)+(s.by||0)/100*bsize,-ZF-.03);mBack.visible=br.w>0;
     const cm=(r,z)=>`${Math.max(1,Math.round(r.w*z))} × ${Math.max(1,Math.round(r.h*z))} cm`,parts=[];
     if(fr.w>0)parts.push('Frente '+cm(fr,size));if(br.w>0)parts.push('Espalda '+cm(br,bsize));
@@ -1541,7 +1743,7 @@ $('coForm').onsubmit=e=>{
   if(v('coCard'))L.push('*💌 Tarjeta*',`"${v('coCard')}"${v('coFrom')?' — '+v('coFrom'):''}`,'');
   L.push(`*💳 Pago:* ${p.label}`);
   if(v('coNotes'))L.push('',`*📝 Notas:* ${v('coNotes')}`);
-  if(cart.some(i=>i.kind==='custom'&&i.cfg&&(i.cfg.i==='foto'||i.cfg.ib)))L.push('','🖼️ Te envío la imagen original para el estampado en este chat.');
+  if(cart.some(i=>i.kind==='custom'&&cfgUsesImage(i.cfg)))L.push('','🖼️ Te envío la imagen original para el estampado en este chat.');
   lastMsg=L.join('\n');const url=waLink(lastMsg);
   const pedido={biz:BIZ_ID,numero:num,cliente:{nombre:v('coName'),whatsapp:v('coPhone')},
     recibe:regalo?{nombre:v('coTo'),telefono:v('coToPhone'),es_regalo:true}:{nombre:v('coName'),telefono:v('coPhone'),es_regalo:false},
@@ -1553,7 +1755,7 @@ $('coForm').onsubmit=e=>{
   window.open(url,'_blank','noopener');
   $('doneNum').textContent=`Pedido ${num} · ${money(t.t)}${t.pend?' + envío':''}`;$('doneWa').href=url;
   $('donePayT').textContent='Pago: '+p.label;$('donePay').textContent=p.detalle||'';
-  $('donePhoto').classList.toggle('hidden',!cart.some(i=>i.kind==='custom'&&i.cfg&&(i.cfg.i==='foto'||i.cfg.ib)));
+  $('donePhoto').classList.toggle('hidden',!cart.some(i=>i.kind==='custom'&&cfgUsesImage(i.cfg)));
   $('coForm').classList.add('hidden');$('done').classList.remove('hidden');document.querySelector('#checkout .co').scrollTop=0;
   cart=[];saveCart();
 };
@@ -1674,9 +1876,9 @@ const PQB=(function(){
   function yarn(hex,repU,repV){
     const map=crochetCanvas(hex).clone(),bm=crochetCanvas(hex,true).clone();
     [map,bm].forEach(t=>{t.needsUpdate=true;t.repeat.set(Math.max(1,repU),Math.max(1,repV));});
-    return new THREE.MeshStandardMaterial({map,bumpMap:bm,bumpScale:.06,roughness:1,metalness:0});
+    return new THREE.MeshStandardMaterial({map,bumpMap:bm,bumpScale:ST>.6?.14:.06,roughness:ST>.6?.82:1,metalness:0});
   }
-  const ST=.42; // tamaño de un punto en cm
+  let ST=.42; // tamaño de un punto en cm (felpa/chenille usa puntos más grandes)
   function ball(r,hex,sx=1,sy=1,sz=1){
     const m=new THREE.Mesh(new THREE.SphereGeometry(r,40,28),yarn(hex,2*Math.PI*r*Math.max(sx,sz)/(ST*8),Math.PI*r*sy/(ST*8)));m.scale.set(sx,sy,sz);return m;
   }
@@ -1696,32 +1898,50 @@ const PQB=(function(){
   function mouth(w,hex){const m=new THREE.Mesh(new THREE.TorusGeometry(w,.07,6,16,Math.PI*.8),flat(hex));m.rotation.z=Math.PI+Math.PI*.1;return m;}
   /* ── Muñeco amigurumi (modelo base de 20 cm sentado; se escala al formato) ── */
   function muneco(it){
-    const A=it.a||'oso',c1=lanaHex(it.c1),c2=lanaHex(it.c2),ca=lanaHex(it.ca||'Rojo'),g=new THREE.Group(),F=(CFG.formatos[it.fmt]||{alto:20});
-    const rattle=it.fmt==='sonajero',key=it.fmt==='llavero';
-    const head=new THREE.Vector3(0,rattle?9.6:13.2,0),HR=4.6;
+    const prevST=ST;ST=it.ln==='felpa'?.95:.42;
+    try{return munecoIn(it);}finally{ST=prevST;}
+  }
+  function munecoIn(it){
+    const A=it.a||'oso';
+    if(A==='pulpo')return finish(pulpo(it),it);
+    if(A==='bombero')return finish(bombero(it),it);
+    const c1=lanaHex(it.c1),c2=lanaHex(it.c2),ca=lanaHex(it.ca||'Rojo'),g=new THREE.Group(),F=(CFG.formatos[it.fmt]||{alto:20});
+    const apego=it.fmt==='apego',rattle=it.fmt==='sonajero'||apego,key=it.fmt==='llavero';
+    const head=new THREE.Vector3(0,apego?6.2:rattle?9.6:13.2,0),HR=4.6;
     const hd=ball(HR,c1,1.04,.96,1);hd.position.copy(head);g.add(hd);
     const front=(x,y,z)=>new THREE.Vector3(x,y,z).add(head);
+    let bd={visible:true};
     if(!rattle){
-      const bd=ball(4.3,c1,1,1.12,.95);bd.position.set(0,4.9,0);g.add(bd);
+      bd=ball(4.3,c1,1,1.12,.95);bd.position.set(0,4.9,0);g.add(bd);
       if(A==='conejo'||A==='gato'||A==='oso'){const belly=patch(new THREE.Vector3(0,4.9,0),4.1,new THREE.Vector3(0,-.05,1),2.3,c2,.5);g.add(belly);}
       [-1,1].forEach(s=>{
         const lg=capsule(1.55,5,c1);lg.rotation.x=Math.PI/2;lg.position.set(s*2.3,1.6,.2);g.add(lg);
-        const sole=ball(1.35,A==='jirafa'||A==='oso'||A==='leon'?c2:c1,1,1,.45);sole.position.set(s*2.3,1.6,5.05);g.add(sole);
+        const sole=ball(1.35,A==='jirafa'||A==='oso'||A==='leon'||A==='torito'?c2:A==='perrito'?lanaHex('Blanco'):c1,1,1,A==='torito'?.8:.45);sole.position.set(s*2.3,1.6,5.05);g.add(sole);
         const ar=capsule(1.2,4.8,c1);ar.position.set(s*3.7,8.6,.6);ar.rotation.set(-.35,0,Math.PI+s*-.32);g.add(ar);
+        if(A==='torito'){const tp=ball(1.32,c2,1,.75,1);tp.position.set(0,4.1,0);ar.add(tp);}
         if(A==='jirafa'){const h=ball(1.18,c2,1,.5,1);h.position.set(s*5.2,4.6,2.1);g.add(h);}
       });
     }else{
-      const bd=ball(2.8,c1,1,.9,.9);bd.position.set(0,4.8,0);g.add(bd);
-      [-1,1].forEach(s=>{const ar=capsule(1.05,3.6,c1);ar.position.set(s*2.4,6,.8);ar.rotation.set(-.6,0,Math.PI+s*-.5);g.add(ar);});
+      bd=ball(2.8,c1,1,.9,.9);bd.position.set(0,4.8,0);g.add(bd);
+      [-1,1].forEach(s=>{const ar=capsule(1.05,3.6,c1);ar.position.set(s*2.4,6,.8);ar.rotation.set(-.6,0,Math.PI+s*-.5);ar.userData.arm=1;g.add(ar);});
+      if(apego){const W=22,s=new THREE.Shape(),r=3;s.moveTo(-W/2+r,-W/2);s.lineTo(W/2-r,-W/2);s.quadraticCurveTo(W/2,-W/2,W/2,-W/2+r);s.lineTo(W/2,W/2-r);s.quadraticCurveTo(W/2,W/2,W/2-r,W/2);s.lineTo(-W/2+r,W/2);s.quadraticCurveTo(-W/2,W/2,-W/2,W/2-r);s.lineTo(-W/2,-W/2+r);s.quadraticCurveTo(-W/2,-W/2,-W/2+r,-W/2);
+        const geo=new THREE.ExtrudeGeometry(s,{depth:.35,bevelEnabled:true,bevelThickness:.35,bevelSize:.4,bevelSegments:3,curveSegments:12});geo.rotateX(-Math.PI/2);
+        const bl=new THREE.Mesh(geo,yarn(c1,W/(ST*8),W/(ST*8)));bl.material.map.repeat.set(1/(ST*8),1/(ST*8));bl.material.bumpMap.repeat.set(1/(ST*8),1/(ST*8));bl.position.set(0,.35,W/2-2.4);g.add(bl);
+        const paw=lanaHex('Blanco');[[-W/2+1.2,W*.18],[W/2-1.2,W*.18],[-W/2+3.5,W-3.6],[W/2-3.5,W-3.6]].forEach(([x,z],i)=>{const p=capsule(1.05,4.2,i<2?c1:paw);p.rotation.set(Math.PI/2,0,i<2?(x<0?.9:-.9):0);p.position.set(x,1.4,z-2.4);g.add(p);
+          const tip=ball(1.1,paw,1,.75,1);tip.position.set(x+(i<2?(x<0?-2.4:2.4):0),1.4,z-2.4+(i<2?1.8:3.6));g.add(tip);});
+        bd.visible=false;[...g.children].forEach(o=>{if(o.userData.arm)o.visible=false;});}
+      else{
       const ring=new THREE.Mesh(new THREE.TorusGeometry(3.9,.62,18,48),flat('#d9b483',.55));ring.position.set(0,-.6,0);g.add(ring);
-      const grain=new THREE.Mesh(new THREE.TorusGeometry(3.9,.63,18,48,Math.PI*2),new THREE.MeshStandardMaterial({color:'#caa06c',roughness:.6,transparent:true,opacity:.35}));grain.position.copy(ring.position);grain.rotation.z=.4;g.add(grain);
+      const grain=new THREE.Mesh(new THREE.TorusGeometry(3.9,.63,18,48,Math.PI*2),new THREE.MeshStandardMaterial({color:'#caa06c',roughness:.6,transparent:true,opacity:.35}));grain.position.copy(ring.position);grain.rotation.z=.4;g.add(grain);}
     }
     // cara
     const showMuzzle=A!=='elefante';
-    if(showMuzzle){const mz=ball(A==='vaca'||A==='jirafa'?2.35:1.95,c2,1.05,A==='vaca'||A==='jirafa'?.82:.72,.62);mz.position.copy(front(0,-1.25,HR-.95));g.add(mz);}
+    if(showMuzzle){const big=A==='vaca'||A==='jirafa'||A==='torito'||A==='perrito',mzc=A==='perrito'?lanaHex('Blanco'):A==='torito'?'#f29bbd':c2;
+      const mz=ball(big?(A==='perrito'?2.6:2.35):1.95,mzc,1.05,big?.82:.72,A==='perrito'?.75:.62);mz.position.copy(front(0,-1.25,HR-.95));g.add(mz);}
     const nose=ball(.55,A==='conejo'||A==='gato'?'#e98aa6':'#4a2c22',1.25,.9,.75);nose.material=glossy(A==='conejo'||A==='gato'?0xe98aa6:0x3b2219);
-    nose.position.copy(front(0,-.55,HR+.12));if(A!=='vaca'&&A!=='jirafa'&&A!=='elefante')g.add(nose);
-    if(A==='vaca'||A==='jirafa'){[-1,1].forEach(s=>{const n=bead(.22);n.position.copy(front(s*.75,-1.1,HR+.62));g.add(n);});}
+    nose.position.copy(front(0,-.55,HR+.12));if(A==='perrito'){nose.scale.set(1.9,1.25,1.1);nose.material=glossy(0x18181c);nose.position.copy(front(0,-.6,HR+.6));}
+    if(A!=='vaca'&&A!=='jirafa'&&A!=='elefante'&&A!=='torito')g.add(nose);
+    if(A==='vaca'||A==='jirafa'||A==='torito'){[-1,1].forEach(s=>{const n=bead(A==='torito'?.3:.22);n.position.copy(front(s*.75,-1.1,HR+.62));g.add(n);});}
     const mo=mouth(.55,'#3b2219');mo.position.copy(front(0,-1.55,HR+.55));if(A!=='elefante')g.add(mo);
     [-1,1].forEach(s=>{const e=bead(.5);e.position.copy(front(s*1.75,.35,HR-.62));g.add(e);
       const ch=patch(head,HR,new THREE.Vector3(s*.62,-.28,.73),.62,'#f4a8bd',.12);g.add(ch);});
@@ -1744,8 +1964,16 @@ const PQB=(function(){
         const i=ball(1.8,c2,1,1.12,.2);i.position.copy(front(s*4.85,-.1,-.15));i.rotation.y=s*.55;g.add(i);});
       const crv=new THREE.CatmullRomCurve3([front(0,-.6,HR-.6),front(0,-2.2,HR+1.1),front(0,-3.6,HR+1.5),front(0,-4.4,HR+2.3)]);
       const tr=new THREE.Mesh(new THREE.TubeGeometry(crv,24,1.05,16,false),yarn(c1,3,2));g.add(tr);const tip=ball(1.05,c1,1,.6,1);tip.position.copy(front(0,-4.4,HR+2.3));g.add(tip);}
+    if(A==='perrito'){[-1,1].forEach(s=>{const e=capsule(1.85,8,c2);e.scale.z=.42;e.position.copy(front(s*4.05,2.7,.2));e.rotation.set(0,s*.25,Math.PI+s*.32);g.add(e);});
+      if(!rattle){const t=capsule(.6,3.4,c1);t.position.set(0,3.4,-3.9);t.rotation.x=-.9;g.add(t);}}
+    if(A==='torito'){[-1,1].forEach(s=>{const e=ball(1.9,c2,1.05,.82,.42);e.position.copy(front(s*4.6,2.2,-.3));e.rotation.z=s*-.5;g.add(e);
+        const i=ball(1.35,'#f29bbd',1,.8,.3);i.position.copy(front(s*4.68,2.2,.12));i.rotation.z=s*-.5;g.add(i);
+        const h=capsule(.95,2.6,c2);h.position.copy(front(s*1.4,3.7,-.4));h.rotation.z=-s*.28;g.add(h);});}
     // accesorio
-    const neckY=rattle?6.8:9.3;
+    if(it.acc==='flor'){const fl=new THREE.Group();const ctr=new THREE.Mesh(new THREE.CylinderGeometry(1.05,1.05,.45,28),yarn(lanaHex('Café'),2,1));ctr.rotation.x=Math.PI/2;fl.add(ctr);
+      for(let i=0;i<14;i++){const a=i/14*Math.PI*2,p=new THREE.Mesh(new THREE.SphereGeometry(.55,12,10),yarn(ca,1,1));p.scale.set(1,.55,.3);p.position.set(Math.cos(a)*1.45,Math.sin(a)*1.45,0);p.rotation.z=a;fl.add(p);}
+      fl.position.copy(front(-3.1,2.4,2.6));fl.lookAt(front(-6.2,4.8,8));g.add(fl);}
+    const neckY=apego?2.9:rattle?6.8:9.3;
     if(it.acc==='mono'){const bow=new THREE.Group(),m=yarn(ca,3,2);
       [-1,1].forEach(s=>{const l=new THREE.Mesh(new THREE.SphereGeometry(1.15,24,16),m);l.scale.set(1.25,.78,.45);l.position.set(s*1.25,0,0);l.rotation.z=s*-.25;bow.add(l);
         const t=capsule(.32,2,ca);t.position.set(s*.5,-.2,0);t.rotation.z=Math.PI+s*.45;bow.add(t);});
@@ -1760,9 +1988,72 @@ const PQB=(function(){
       let fs=130;x.font=`600 ${fs}px Fredoka, sans-serif`;while(x.measureText(it.tag).width>440&&fs>40){fs-=6;x.font=`600 ${fs}px Fredoka, sans-serif`;}x.fillText(it.tag,256,160);
       const t=new THREE.CanvasTexture(cv);t.encoding=THREE.sRGBEncoding;const tg=new THREE.Mesh(new THREE.PlaneGeometry(4.3,2.5),new THREE.MeshStandardMaterial({map:t,roughness:.9,side:THREE.DoubleSide}));
       tg.position.set(rattle?3.6:5.6,rattle?3.2:5.3,rattle?2.6:3.2);tg.rotation.set(-.15,-.35,.12);g.add(tg);}
-    // escala exacta: el muñeco mide lo que dice el formato (cm reales)
-    let bb=new THREE.Box3().setFromObject(g);const hh=bb.max.y-bb.min.y;g.scale.setScalar((F.alto||20)/hh);
-    bb=new THREE.Box3().setFromObject(g);g.position.y-=bb.min.y;
+    return finish(g,it);
+  }
+  // escala exacta: el muñeco mide lo que dice el formato (cm reales); la mantita se mide de ancho
+  function finish(g,it){
+    const F=CFG.formatos[it.fmt]||{alto:20};let bb=new THREE.Box3().setFromObject(g);const sz=bb.getSize(new THREE.Vector3());
+    g.scale.setScalar((F.alto||20)/(it.fmt==='apego'?sz.x:it.a==='pulpo'?Math.max(sz.x,sz.z,sz.y):sz.y));bb=new THREE.Box3().setFromObject(g);g.position.y-=bb.min.y;return g;
+  }
+  /* ── Pulpo: tentáculos rectos (felpa), rizados (apego) o patitas (pequeño) ── */
+  function pulpo(it){
+    const g=new THREE.Group(),c1=lanaHex(it.c1),c2=lanaHex(it.c2),wh=lanaHex('Blanco'),style=it.pt||'rectos';
+    const tcol=i=>[c2,c1,c2,wh,c1,c2,c1,c2][i%8];
+    const tube=(pts,r,hex)=>{const crv=new THREE.CatmullRomCurve3(pts);const len=crv.getLength();
+      const m=new THREE.Mesh(new THREE.TubeGeometry(crv,Math.max(24,Math.round(len*3)),r,14,false),yarn(hex,len/(ST*8),2*Math.PI*r/(ST*8)));
+      m.material.map.repeat.set(len/(ST*8),Math.max(1,2*Math.PI*r/(ST*8)));m.material.bumpMap.repeat.copy(m.material.map.repeat);g.add(m);
+      const e=ball(r,hex);e.position.copy(pts[pts.length-1]);g.add(e);return m;};
+    let HRp=5.2,hy;
+    if(style==='patitas'){HRp=3.4;hy=6.2;
+      const hd=ball(HRp,c1,1,.95,.95);hd.position.set(0,hy,0);g.add(hd);
+      [[-1,-1],[1,-1]].forEach(([s])=>{tube([new THREE.Vector3(s*1.3,hy-2.6,.6),new THREE.Vector3(s*1.8,hy-5,1.6),new THREE.Vector3(s*2.4,1.2,3.6),new THREE.Vector3(s*2.9,.7,6.2)],.48,c1);
+        const f=ball(1.15,wh,1.25,.8,1.4);f.position.set(s*2.9,.7,6.4);g.add(f);});
+      [-1,1].forEach(s=>{tube([new THREE.Vector3(s*2.9,hy+.2,.2),new THREE.Vector3(s*5.4,hy+1.8,.6),new THREE.Vector3(s*7,hy-1,1),new THREE.Vector3(s*6.6,hy-3.4,1.4)],.45,c1);
+        const f=ball(.75,c1);f.position.set(s*6.6,hy-3.8,1.4);g.add(f);});
+    }else if(style==='rizados'){hy=15.5;
+      const hd=ball(HRp,c1,1,1.04,1);hd.position.set(0,hy,0);g.add(hd);
+      const skirt=new THREE.Mesh(new THREE.TorusGeometry(3.6,1.25,14,30),yarn(c1,10,2));skirt.rotation.x=Math.PI/2;skirt.position.set(0,hy-4.3,0);g.add(skirt);
+      for(let i=0;i<8;i++){const a=i/8*Math.PI*2+.2,cx=Math.cos(a)*3.1,cz=Math.sin(a)*3.1,P=[];
+        for(let k=0;k<=72;k++){const t=k/72,ang=t*Math.PI*2*5.5,rr=.95*(1-t*.25);P.push(new THREE.Vector3(cx+Math.cos(ang)*rr+cx*t*.35,hy-4.6-t*10.8,cz+Math.sin(ang)*rr+cz*t*.35));}
+        tube(P,.62,tcol(i));}
+    }else{hy=5.4;
+      const hd=ball(HRp,c1,1,1.05,1);hd.position.set(0,hy+3.6,0);g.add(hd);hy+=3.6;
+      const skirt=new THREE.Mesh(new THREE.TorusGeometry(3.3,1.1,14,30),yarn(c1,10,2));skirt.rotation.x=Math.PI/2;skirt.position.set(0,hy-4.6,0);g.add(skirt);
+      for(let i=0;i<8;i++){const a=i/8*Math.PI*2+.35,dx=Math.cos(a),dz=Math.sin(a),bend=(i%2?.4:-.4);
+        tube([new THREE.Vector3(dx*2.8,hy-4.8,dz*2.8),new THREE.Vector3(dx*5,1.6,dz*5),new THREE.Vector3(dx*8.2+dz*bend*2,1.1,dz*8.2-dx*bend*2),new THREE.Vector3(dx*11+dz*bend*3.5,1.1,dz*11-dx*bend*3.5)],1.05,tcol(i));}
+    }
+    // cara
+    const fy=style==='patitas'?hy+.6:hy-.2,fz=HRp-.5;
+    [-1,1].forEach(s=>{const e=bead(style==='patitas'?.62:.7);e.position.set(s*(style==='patitas'?1.3:1.7),fy+.5,fz+(style==='patitas'?.25:0));g.add(e);
+      if(it.ln==='felpa'&&style!=='patitas'){const ring=new THREE.Mesh(new THREE.TorusGeometry(.78,.16,8,24),glossy(0x2f6fd0));ring.position.copy(e.position);ring.position.z-=.05;g.add(ring);}
+      if(style!=='patitas'){const br=new THREE.Mesh(new THREE.TorusGeometry(.9,.07,6,16,Math.PI*.6),flat('#22222a'));br.position.set(s*1.9,fy+2.1,fz-.25);br.rotation.z=Math.PI*.2+(s<0?.1:-.1);g.add(br);}});
+    if(style!=='patitas'){const mo=mouth(.75,'#22222a');mo.position.set(0,fy-.9,fz+.35);g.add(mo);}
+    return g;
+  }
+  /* ── Bombero: muñeco de pie con casco, uniforme y manguera ── */
+  function bombero(it){
+    const g=new THREE.Group(),red=lanaHex(it.c1),yel=lanaHex(it.c2),skin=lanaHex('Crema'),blk=lanaHex('Negro'),wh=lanaHex('Blanco'),pink='#f3a0a8';
+    const band=(r,y,hex,x=0,z=0)=>{const t=new THREE.Mesh(new THREE.TorusGeometry(r,.42,10,28),yarn(hex,8,1));t.rotation.x=Math.PI/2;t.position.set(x,y,z);g.add(t);return t;};
+    [-1,1].forEach(s=>{const lg=capsule(1.55,13,red);lg.position.set(s*1.85,1.2,0);g.add(lg);
+      band(1.58,4.4,yel,s*1.85);band(1.58,1.6,pink,s*1.85);const sh=ball(1.6,blk,1.05,.55,1.35);sh.position.set(s*1.85,.75,.4);g.add(sh);});
+    const tor=ball(4,red,1,1.45,.82);tor.position.set(0,17.6,0);g.add(tor);
+    band(3.75,15,yel);band(3.7,17.4,blk);
+    const col=new THREE.Mesh(new THREE.TorusGeometry(1.7,.45,10,24),yarn(yel,6,1));col.rotation.x=Math.PI/2;col.position.set(0,23.2,0);g.add(col);
+    [-1,1].forEach(s=>{const ar=capsule(1.25,8.5,red);ar.position.set(s*3.4,22.3,0);ar.rotation.z=Math.PI+s*-.62;g.add(ar);
+      const cuff=new THREE.Mesh(new THREE.TorusGeometry(1.28,.38,8,20),yarn(yel,6,1));cuff.position.set(0,6.6,0);cuff.rotation.x=Math.PI/2;ar.add(cuff);
+      const hand=ball(1.1,wh);hand.position.set(0,8.5,0);ar.add(hand);});
+    const H=new THREE.Vector3(0,28.4,0),hd=ball(4.4,skin,1,.98,.95);hd.position.copy(H);g.add(hd);
+    [-1,1].forEach(s=>{const e=ball(1.05,skin,.55,1,1);e.position.set(s*4.3,28.2,0);g.add(e);
+      const ey=bead(.55);ey.position.set(s*1.5,28.9,4);g.add(ey);
+      const ch=patch(H,4.3,new THREE.Vector3(s*.55,-.28,.78),.65,'#f5b3b8',.12);g.add(ch);
+      const br=new THREE.Mesh(new THREE.TorusGeometry(.9,.08,6,14,Math.PI*.55),flat('#22222a'));br.position.set(s*1.6,30.1,3.8);br.rotation.z=Math.PI*.22;g.add(br);});
+    const hair=ball(4.5,blk,1,.6,.95);hair.position.set(0,31,-.6);g.add(hair);
+    const helm=new THREE.Mesh(new THREE.SphereGeometry(4.8,36,20,0,Math.PI*2,0,Math.PI*.5),yarn(red,12,4));helm.position.set(0,30.4,-.3);g.add(helm);
+    const brim=new THREE.Mesh(new THREE.TorusGeometry(4.9,.75,10,40),yarn(red,14,1));brim.rotation.x=Math.PI/2;brim.position.set(0,30.5,-.3);brim.scale.set(1,1.12,1);g.add(brim);
+    const knob=ball(1.1,yel,1.2,.6,1.2);knob.position.set(0,35.1,-.3);g.add(knob);
+    const ns=new THREE.Mesh(new THREE.CatmullRomCurve3?new THREE.TubeGeometry(new THREE.CatmullRomCurve3([new THREE.Vector3(3.4,15.3,1.5),new THREE.Vector3(7,11,3),new THREE.Vector3(9.5,16,3),new THREE.Vector3(9.2,19.6,2.4)]),40,.38,10,false):null,yarn(yel,10,1));g.add(ns);
+    const noz=capsule(.55,3,'#7fb2e5');noz.position.set(9.2,19.4,2.4);noz.rotation.z=-.2;g.add(noz);
+    for(let i=0;i<7;i++){const f=capsule(.13,2.4,'#9cc9ef');f.position.set(9.6+Math.cos(i)*.3,22.2,2.4+Math.sin(i)*.3);f.rotation.set(Math.sin(i)*.3,0,-.2+(i-3)*.12);g.add(f);}
     return g;
   }
   /* ── Taza (11 oz: 8.2 cm de diámetro × 9.5 cm de alto) ── */
@@ -1828,14 +2119,64 @@ const PQB=(function(){
     lid.rotation.x=1.28;lid.position.set(0,ld/2*.96+.1,-D/2-lh-.6);g.add(lid);
     g.userData={W,D,H,fy,th};return g;
   }
-  return {muneco,taza,doblado,caja,lanaHex};
+
+  /* ── Llavero sublimado de MDF (3 mm) con argolla y cadena ── */
+  const GLYPH={ovalo:'⬮',circulo:'●',cuadrado:'■',rombo:'◆',corazon:'♥',corazonG:'⬟',rectangulo:'▮',hueso:'🦴',camiseta:'👕',casa:'🏠'};
+  function llaveroShape(sh,w,h){
+    const S=new THREE.Shape();let hole=[0,h/2-.45];
+    const rr=(W,H,r)=>{S.moveTo(-W/2+r,-H/2);S.lineTo(W/2-r,-H/2);S.quadraticCurveTo(W/2,-H/2,W/2,-H/2+r);S.lineTo(W/2,H/2-r);S.quadraticCurveTo(W/2,H/2,W/2-r,H/2);
+      S.lineTo(-W/2+r,H/2);S.quadraticCurveTo(-W/2,H/2,-W/2,H/2-r);S.lineTo(-W/2,-H/2+r);S.quadraticCurveTo(-W/2,-H/2,-W/2+r,-H/2);};
+    if(sh==='ovalo'){S.absellipse(0,0,w/2,h/2,0,Math.PI*2,false);}
+    else if(sh==='circulo'){S.absarc(0,0,w/2,0,Math.PI*2,false);}
+    else if(sh==='cuadrado'||sh==='rectangulo'){rr(w,h,.35);}
+    else if(sh==='rombo'){const r=.3,P=[[0,h/2],[w/2,0],[0,-h/2],[-w/2,0]];
+      P.forEach((p,i)=>{const a=P[(i+3)%4],b=P[(i+1)%4],k=r/Math.hypot(p[0]-a[0],p[1]-a[1]),p1=[p[0]+(a[0]-p[0])*k,p[1]+(a[1]-p[1])*k],p2=[p[0]+(b[0]-p[0])*k,p[1]+(b[1]-p[1])*k];
+        if(i===0)S.moveTo(...p1);else S.lineTo(...p1);S.quadraticCurveTo(p[0],p[1],...p2);});S.closePath();hole=[0,h/2-.8];}
+    else if(sh==='corazon'){const pts=[];for(let i=0;i<=120;i++){const t=i/120*Math.PI*2;pts.push([16*Math.sin(t)**3,13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t)]);}
+      const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]),x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+      const m=p=>[(p[0]-(x0+x1)/2)/(x1-x0)*w,(p[1]-(y0+y1)/2)/(y1-y0)*h];pts.forEach((p,i)=>{const q=m(p);if(i===0)S.moveTo(...q);else S.lineTo(...q);});
+      hole=[0,m([0,5])[1]-.5];}
+    else if(sh==='corazonG'){const P=[[0,-h/2],[w/2,h*.08],[w/2,h*.3],[w/4,h/2],[0,h*.28],[-w/4,h/2],[-w/2,h*.3],[-w/2,h*.08]];P.forEach((p,i)=>i?S.lineTo(...p):S.moveTo(...p));S.closePath();hole=[0,h*.28-.45];}
+    else if(sh==='hueso'){const r=h*.27,cx=w/2-r,cy=h/2-r,t=h*.2,dx=Math.sqrt(Math.max(0,r*r-(t-cy)**2)),sq=Math.sqrt(Math.max(0,r*r-cy*cy));
+      S.moveTo(-cx+dx,t);S.lineTo(cx-dx,t);S.absarc(cx,cy,r,Math.atan2(t-cy,-dx),Math.atan2(-cy,sq),true);
+      S.absarc(cx,-cy,r,Math.atan2(cy,sq),Math.atan2(cy-t,-dx),true);S.lineTo(-cx+dx,-t);
+      S.absarc(-cx,-cy,r,Math.atan2(cy-t,dx),Math.atan2(cy,-sq),true);S.absarc(-cx,cy,r,Math.atan2(-cy,-sq),Math.atan2(t-cy,dx),true);hole=[0,t-.38];}
+    else if(sh==='camiseta'){garmentPath({moveTo:(x,y)=>S.moveTo(x,y),lineTo:(x,y)=>S.lineTo(x,y),quadraticCurveTo:(a,b,c,d)=>S.quadraticCurveTo(a,b,c,d),bezierCurveTo:(a,b,c,d,e2,f)=>S.bezierCurveTo(a,b,c,d,e2,f),tag(){}},'camiseta',w*.62,h);hole=[0,h/2-h*.13-.25];}
+    else if(sh==='casa'){const P=[[-.39*w,-h/2],[.39*w,-h/2],[.39*w,.05*h],[.5*w,.05*h],[0,h/2],[-.2*w,.32*h],[-.2*w,.44*h],[-.32*w,.44*h],[-.32*w,.212*h],[-.5*w,.05*h],[-.39*w,.05*h]];
+      P.forEach((p,i)=>i?S.lineTo(...p):S.moveTo(...p));S.closePath();hole=[0,h/2-.95];}
+    else rr(w,h,.35);
+    const hp=new THREE.Path();hp.absarc(hole[0],hole[1],.2,0,Math.PI*2,true);S.holes.push(hp);
+    return {S,hole};
+  }
+  function llavero(it,draw){
+    const L=CFG.llaveros[it.sh]||{w:5,h:5},w=+L.w,h=+L.h,g=new THREE.Group(),{S,hole}=llaveroShape(it.sh,w,h),T=.3;
+    const geo=new THREE.ExtrudeGeometry(S,{depth:T-.04,bevelEnabled:true,bevelThickness:.02,bevelSize:.02,bevelSegments:1,curveSegments:48});geo.translate(0,0,-(T-.04)/2);
+    const body=new THREE.Mesh(geo,[new THREE.MeshStandardMaterial({color:0xf7f5f0,roughness:.6}),new THREE.MeshStandardMaterial({color:0x5a4434,roughness:.9})]);g.add(body);
+    const pts=S.getPoints(48),xs=pts.map(p=>p.x),ys=pts.map(p=>p.y),x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),bw=x1-x0,bh=y1-y0;
+    const face=(back)=>{const k=900/Math.max(bw,bh),cv=document.createElement('canvas');cv.width=Math.round(bw*k);cv.height=Math.round(bh*k);
+      // atrás se ve en espejo: se dibuja con x invertida para que el texto se lea bien
+      const toC=p=>[back?(x1-p.x)*k:(p.x-x0)*k,(y1-p.y)*k];draw(cv,{poly:pts.map(toC),back,k,hole:toC({x:hole[0],y:hole[1]})});
+      const t=new THREE.CanvasTexture(cv);t.encoding=THREE.sRGBEncoding;t.anisotropy=8;t.wrapS=t.wrapT=THREE.RepeatWrapping;
+      t.repeat.set(back?-1/bw:1/bw,1/bh);t.offset.set(back?x1/bw:-x0/bw,-y0/bh);
+      const m=new THREE.Mesh(new THREE.ShapeGeometry(S,48),new THREE.MeshStandardMaterial({map:t,roughness:.35,metalness:0,side:back?THREE.BackSide:THREE.FrontSide}));
+      m.position.z=(back?-1:1)*(T/2+.006);return m;};
+    g.add(face(false));g.add(face(true));
+    // argolla, cadena y aro
+    const metal=new THREE.MeshStandardMaterial({color:0xcfd3da,metalness:.9,roughness:.22});
+    const j=new THREE.Mesh(new THREE.TorusGeometry(.32,.05,10,24),metal);j.rotation.y=Math.PI/2;j.position.set(hole[0],hole[1]+.2,0);g.add(j);
+    let y=hole[1]+.55;for(let i=0;i<4;i++){const l=new THREE.Mesh(new THREE.TorusGeometry(.2,.045,8,18),metal);l.scale.y=1.45;l.position.set(hole[0],y,0);l.rotation.y=i%2?0:Math.PI/2;g.add(l);y+=.42;}
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(1.25,.08,12,48),metal);ring.position.set(hole[0],y+1.12,0);ring.rotation.y=.5;g.add(ring);
+    const ring2=ring.clone();ring2.position.z+=.12;ring2.position.x+=.05;g.add(ring2);
+    g.userData={w,h};return g;
+  }
+  return {muneco,taza,doblado,caja,llavero,lanaHex,GLYPH};
 })();
 
 /* ════════════ DISEÑADOR: estado y opciones ════════════ */
 const onKeys=o=>Object.keys(o||{}).filter(k=>o[k]&&o[k].on!==false);
 const tallasOn=p=>((CFG.prendas[p]||{}).tallas||[]).filter(t=>t.on!==false);
-function defaultDesign(){return {mode:'ropa',m:defM(),b:defB(),p:'body_mc',t:'3-6',c:'Blanco',n:'',f:'redonda',k:'Azul marino',i:'osito',fr:'',pos:'centro',nb:'',ib:0,fz:100,fy:0,bz:100,by:0,ex:{caja:false},q:1};}
-let st=defaultDesign(),editUid=null,DS={img:{f:null,b:null},step:0};
+function defaultDesign(){return {mode:'ropa',m:defM(),b:defB(),p:'body_mc',t:'3-6',c:'Blanco',n:'',f:'redonda',k:'Azul marino',i:'osito',fr:'',pos:'centro',nb:'',ib:0,fy:0,by:0,tf:defTf(),l:defL(),ex:{caja:false},q:1};}
+let st=defaultDesign(),editUid=null,DS={img:{f:null,b:null,l:null},step:0,tfSel:{}};
 const MAX_LINES=3;
 function cleanLines(t){return String(t||'').replace(/\r/g,'').split('\n').slice(0,MAX_LINES).map(l=>l.slice(0,CFG.maxNombre)).join('\n');}
 const linesOf=t=>String(t||'').split('\n').map(l=>l.trim()).filter(Boolean);
@@ -1856,7 +2197,8 @@ function sanitizeRopa(s){
   if(!['centro','izq'].includes(s.pos)||s.p==='babero')s.pos='centro';
   s.ex=s.ex||{};s.ex={caja:!!s.ex.caja&&!!(CFG.extras.caja&&CFG.extras.caja.on!==false)};
   const cl=(v,a,b,d)=>{v=Math.round(+v);return isFinite(v)?Math.max(a,Math.min(b,v)):d;};
-  s.fz=cl(s.fz,40,180,100);s.bz=cl(s.bz,40,180,100);s.fy=cl(s.fy,-30,30,0);s.by=cl(s.by,-30,30,0);
+  s.fy=cl(s.fy,-30,30,0);s.by=cl(s.by,-30,30,0);
+  s.tf=sanTf(s.tf);if(s.fz&&s.fz!==100&&s.tf.f.pic.s===100)s.tf.f.pic.s=cl(s.fz,30,200,100);if(s.bz&&s.bz!==100&&s.tf.b.pic.s===100)s.tf.b.pic.s=cl(s.bz,30,200,100);delete s.fz;delete s.bz;
   s.q=Math.max(1,Math.min(50,s.q|0||1));
   return s;
 }
@@ -1881,16 +2223,16 @@ function designDescRopa(s){
   return parts.join(' · ');
 }
 function encodeDesign(s){
-  if(s.mode==='muneco'||s.mode==='caja'){const o={mo:s.mode,q:s.q};if(s.mode==='muneco')o.m=s.m;else o.b=s.b;
+  if(s.mode==='muneco'||s.mode==='caja'||s.mode==='llavero'){const o={mo:s.mode,q:s.q};if(s.mode==='muneco')o.m=s.m;else if(s.mode==='llavero')o.l=s.l;else o.b=s.b;
     return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
-  const o={p:s.p,t:s.t,c:s.c,n:s.n,f:s.f,k:s.k,i:s.i,fr:s.fr,pos:s.pos,nb:s.nb,ib:s.ib,fz:s.fz,fy:s.fy,bz:s.bz,by:s.by,e:s.ex.caja?2:0,q:s.q};
+  const o={p:s.p,t:s.t,c:s.c,n:s.n,f:s.f,k:s.k,i:s.i,fr:s.fr,pos:s.pos,nb:s.nb,ib:s.ib,fy:s.fy,by:s.by,tf:s.tf,e:s.ex.caja?2:0,q:s.q};
   return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
 }
 function decodeDesign(code){
   try{let b=String(code||'').trim().replace(/-/g,'+').replace(/_/g,'/');while(b.length%4)b+='=';
-    const o=JSON.parse(decodeURIComponent(escape(atob(b))));if(o&&(o.mo==='muneco'||o.mo==='caja')){const s=defaultDesign();s.mode=o.mo;s.q=+o.q||1;if(o.m)s.m=Object.assign(defM(),o.m);if(o.b)s.b=Object.assign(defB(),o.b);return s;}
+    const o=JSON.parse(decodeURIComponent(escape(atob(b))));if(o&&(o.mo==='muneco'||o.mo==='caja'||o.mo==='llavero')){const s=defaultDesign();s.mode=o.mo;s.q=+o.q||1;if(o.m)s.m=Object.assign(defM(),o.m);if(o.b)s.b=Object.assign(defB(),o.b);if(o.l)s.l=Object.assign(defL(),o.l);return s;}
     if(!o||!o.p)return null;
-    const s=defaultDesign();Object.assign(s,{p:String(o.p),t:String(o.t||''),c:String(o.c||''),n:String(o.n||''),f:String(o.f||''),k:String(o.k||''),i:String(o.i||''),fr:String(o.fr||''),pos:String(o.pos||'centro'),nb:String(o.nb||''),ib:o.ib?1:0,fz:o.fz??100,fy:o.fy??0,bz:o.bz??100,by:o.by??0,q:+o.q||1});
+    const s=defaultDesign();Object.assign(s,{p:String(o.p),t:String(o.t||''),c:String(o.c||''),n:String(o.n||''),f:String(o.f||''),k:String(o.k||''),i:String(o.i||''),fr:String(o.fr||''),pos:String(o.pos||'centro'),nb:String(o.nb||''),ib:o.ib?1:0,fz:o.fz??100,fy:o.fy??0,bz:o.bz??100,by:o.by??0,tf:o.tf,q:+o.q||1});
     if(o.e&1&&!s.nb)s.nb=s.n; // links antiguos: "nombre en la espalda"
     s.ex={caja:!!(o.e&2)};return s;
   }catch(e){return null;}
@@ -1927,7 +2269,7 @@ function processImage(im){
 async function loadImageFor(side,file){
   if(!file)return;if(!/^image\//.test(file.type)){showToast('Elige un archivo de imagen (PNG o JPG)');return;}
   try{const im=await readImage(file);DS.img[side]=processImage(im);
-    if(side==='f')st.i='foto';else st.ib=1;changed();
+    if(side==='f')st.i='foto';else if(side==='l')st.l.i='foto';else st.ib=1;changed();
     showToast(DS.img[side].hadAlpha?'✓ Imagen sin fondo cargada':DS.img[side].removed?'✓ Imagen cargada · quitamos el fondo':'✓ Imagen cargada');
   }catch(e){showToast('No se pudo leer esa imagen');}
 }
@@ -1961,6 +2303,9 @@ const IDEAS=[
   {l:'👶 Body con su nombre',s:{p:'body_mc',n:'Emma',i:'osito',k:'Rosa',c:'Blanco',f:'cursiva'}},
   {l:'🎈 Mi primer cumpleaños',s:{p:'body_mc',t:'9-12',n:'Mateo',i:'globo',fr:'Mi primer cumpleaños',k:'Azul marino',c:'Celeste',f:'redonda'}},
   {l:'🧸 Osito con moño',s:{mode:'muneco',m:{a:'oso',fmt:'mediano',c1:'Crema',c2:'Café claro',acc:'mono',ca:'Rojo'}}},
+  {l:'🐙 Pulpo de apego',s:{mode:'muneco',m:{a:'pulpo',fmt:'mediano',pt:'rizados',ln:'felpa',c1:'Celeste',c2:'Azul',acc:'ninguno'}}},
+  {l:'🧑‍🚒 Muñeco bombero',s:{mode:'muneco',m:{a:'bombero',fmt:'grande',c1:'Rojo',c2:'Amarillo',acc:'ninguno'}}},
+  {l:'🐶 Mantita de apego',s:{mode:'muneco',m:{a:'perrito',fmt:'apego',c1:'Celeste',c2:'Negro',acc:'ninguno'}}},
   {l:'🐰 Sonajero conejito',s:{mode:'muneco',m:{a:'conejo',fmt:'sonajero',c1:'Amarillo',c2:'Blanco',acc:'bufanda',ca:'Café'}}},
   {l:'🎁 Set regalo premium',s:{mode:'caja',b:{size:'m',rel:'Kraft',lazo:'Celeste',tar:true,items:[
     {t:'body',p:'body_mc',tl:'3-6',c:'Blanco',n:'Samuel',i:'osito',k:'Celeste',f:'cursiva'},
@@ -1989,9 +2334,8 @@ function syncRopa(){
   document.querySelectorAll('[data-ex]').forEach(c=>{c.checked=!!st.ex[c.dataset.ex];c.closest('.xrow').classList.toggle('on',c.checked);});
   const fn=$('fotoNote');fn.classList.toggle('hidden',st.i!=='foto');if(st.i==='foto')fn.innerHTML=imgNote('f');
   const setR=(id,v,lab,txt)=>{const r=$(id);if(document.activeElement!==r)r.value=v;$(lab).textContent=txt;};
-  setR('rFz',st.fz,'vFz',st.fz+'%');setR('rFy',st.fy,'vFy',st.fy>0?'más arriba':st.fy<0?'más abajo':'normal');
-  setR('rBz',st.bz,'vBz',st.bz+'%');setR('rBy',st.by,'vBy',st.by>0?'más arriba':st.by<0?'más abajo':'normal');
-  $('ctlFz').classList.toggle('hidden',!(st.i==='foto'&&DS.img.f));$('ctlBz').classList.toggle('hidden',!(st.ib&&DS.img.b));
+  setR('rFy',st.fy,'vFy',st.fy>0?'más arriba':st.fy<0?'más abajo':'normal');
+  setR('rBy',st.by,'vBy',st.by>0?'más arriba':st.by<0?'más abajo':'normal');
   $('ctlBy').classList.toggle('hidden',!backOn(st));
   const bn=$('imgNoteB');bn.classList.toggle('hidden',!st.ib&&!DS.img.b);bn.innerHTML=st.ib||DS.img.b?imgNote('b'):'';
   $('optPos').classList.toggle('hidden',st.p==='babero');$('optPos').previousElementSibling.classList.toggle('hidden',st.p==='babero');
@@ -2000,7 +2344,7 @@ function syncRopa(){
   $('bdSummary').innerHTML=`<b>${esc(designNameRopa(st))}</b><br>${esc(designDescRopa(st))}<br>${money(u)} c/u${st.q>1?` × ${st.q} = <b>${money(u*st.q)}</b>`:''}`;
   $('bdAdd').textContent=editUid?'Guardar cambios':'Agregar al carrito';
 }
-function imgs(){return {f:st.i==='foto'&&DS.img.f?DS.img.f.src:null,b:st.ib&&DS.img.b?DS.img.b.src:null};}
+function imgs(){return {f:st.i==='foto'&&DS.img.f?DS.img.f.src:null,b:st.ib&&DS.img.b?DS.img.b.src:null,l:st.l&&st.l.i==='foto'&&DS.img.l?DS.img.l.src:null};}
 function changed(){sanitize(st);syncUI();if(window.PQ3D&&PQ3D.ready)PQ3D.update(st,imgs());}
 function bindDesigner(){
   const pick=(id,key,after)=>$(id).addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;st[key]=b.dataset.v;if(after)after(b.dataset.v);changed();});
@@ -2009,17 +2353,17 @@ function bindDesigner(){
   const lim=el=>{const v=cleanLines(el.value);if(v!==el.value){const p=el.selectionStart;el.value=v;el.selectionStart=el.selectionEnd=Math.min(p,v.length);}return v;};
   $('inName').addEventListener('input',()=>{st.n=lim($('inName'));changed();});
   $('inBack').addEventListener('input',()=>{st.nb=lim($('inBack'));changed();});
-  [['rFz','fz'],['rFy','fy'],['rBz','bz'],['rBy','by']].forEach(([id,k])=>$(id).addEventListener('input',()=>{st[k]=+$(id).value;changed();}));
+  [['rFy','fy'],['rBy','by']].forEach(([id,k])=>$(id).addEventListener('input',()=>{st[k]=+$(id).value;changed();}));
   document.querySelectorAll('[data-reset]').forEach(b=>b.addEventListener('click',()=>{const [k,v]=b.dataset.reset.split(':');st[k]=+v;changed();}));
   $('backCopy').onclick=()=>{st.nb=st.n||st.nb;changed();if(!st.n)showToast('Primero escribe el texto del frente');};
   $('backImgBtn').onclick=()=>$('inFotoB').click();
   $('inFotoB').addEventListener('change',e=>{loadImageFor('b',e.target.files&&e.target.files[0]);e.target.value='';});
   $('builder').addEventListener('click',e=>{
     const pk=e.target.closest('[data-imgpick]'),bg=e.target.closest('[data-imgbg]'),dl=e.target.closest('[data-imgdel]');
-    if(pk)$(pk.dataset.imgpick==='f'?'inFoto':'inFotoB').click();
+    if(pk)$({f:'inFoto',b:'inFotoB',l:'inFotoL'}[pk.dataset.imgpick]).click();
     if(bg){const I=DS.img[bg.dataset.imgbg];if(I.removed){I.cut=I.src;I.src=I.orig;I.removed=false;I.keep=true;}else if(I.cut){I.src=I.cut;I.removed=true;I.keep=false;}changed();}
     const ed=e.target.closest('[data-imgedit]');if(ed)BGE.open(ed.dataset.imgedit);
-    if(dl){const sd=dl.dataset.imgdel;DS.img[sd]=null;if(sd==='f')st.i='';else st.ib=0;changed();}
+    if(dl){const sd=dl.dataset.imgdel;DS.img[sd]=null;if(sd==='f')st.i='';else if(sd==='l')st.l.i='';else st.ib=0;changed();}
   });
   $('inFraseSel').addEventListener('change',()=>{const v=$('inFraseSel').value;if(v==='__own'){st.fr=$('inFrase').value;$('fraseOwnWrap').classList.remove('hidden');$('inFrase').focus();}else st.fr=v;changed();});
   $('inFrase').addEventListener('input',()=>{st.fr=$('inFrase').value;changed();});
@@ -2045,6 +2389,8 @@ function addDesign(){
   if(st.mode==='ropa'&&!linesOf(st.n).length&&!st.i&&!st.fr&&!backOn(st)){showToast('Escribe un texto o elige un dibujo');goStep(1);setTimeout(()=>$('inName').focus(),50);return;}
   if(st.mode==='ropa'&&st.i==='foto'&&!DS.img.f){showToast('Sube la imagen para el frente');$('inFoto').click();return;}
   if(st.mode==='ropa'&&st.ib&&!DS.img.b){showToast('Sube la imagen para la espalda');$('inFotoB').click();return;}
+  if(st.mode==='llavero'&&st.l.i==='foto'&&!DS.img.l){showToast('Sube la imagen del llavero');$('inFotoL').click();return;}
+  if(st.mode==='llavero'&&!linesOf(st.l.n).length&&!st.l.i){showToast('Escribe un texto o elige un dibujo');goStep(1);return;}
   const item={uid:editUid||('c'+Date.now()),kind:'custom',name:designName(st),desc:designDesc(st),price:unitPrice(st),qty:st.q,cfg:JSON.parse(JSON.stringify(st)),thumb:null};
   try{if(window.PQ3D&&PQ3D.ready)item.thumb=PQ3D.snapshot(220,'image/jpeg');}catch(e){}
   const ix=cart.findIndex(i=>i.uid===item.uid);if(ix>=0)cart[ix]=item;else cart.push(item);
@@ -2108,7 +2454,7 @@ else loadBuilder();
 
 /* ── Barra inferior, menú y teclado ── */
 let inBuilder=false;
-function updateBar(){const hide=FHD.open||inBuilder||$('drawer').classList.contains('open')||$('checkout').classList.contains('open')||$('productModal').classList.contains('open');$('mbar').classList.toggle('hide',hide);}
+function updateBar(){const hide=FHD.open||inBuilder||$('drawer').classList.contains('open')||$('checkout').classList.contains('open')||$('productModal').classList.contains('open')||$('dlvBox').classList.contains('open');$('mbar').classList.toggle('hide',hide);}
 if('IntersectionObserver' in window)new IntersectionObserver(es=>{inBuilder=es[0].isIntersecting&&!isPhone();updateBar();},{rootMargin:'-30% 0px -30% 0px'}).observe($('builder'));
 function applyBiz(){
   const wa=waLink('');
@@ -2134,12 +2480,18 @@ document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(BGE.isOpen
 /* ════════════ MUÑECOS TEJIDOS Y CAJA DE REGALO ════════════ */
 const lanasOn=()=>onKeys(CFG.lanas);
 function defM(a){const A=onKeys(CFG.munecos);a=a&&CFG.munecos[a]?a:(A[0]||'oso');const M=CFG.munecos[a]||{};
-  return {a,fmt:CFG.formatos.mediano&&CFG.formatos.mediano.on!==false?'mediano':onKeys(CFG.formatos)[0],c1:M.c1||'Crema',c2:M.c2||'Blanco',acc:'mono',ca:'Rojo',tag:''};}
+  return {a,fmt:CFG.formatos.mediano&&CFG.formatos.mediano.on!==false?'mediano':onKeys(CFG.formatos)[0],c1:M.c1||'Crema',c2:M.c2||'Blanco',acc:a==='pulpo'||a==='bombero'?'ninguno':'mono',ca:'Rojo',tag:'',pt:'rectos',ln:M.ln||'normal'};}
+/* formatos que tiene cada muñeco (el pulpo y el bombero no vienen en sonajero, llavero ni mantita) */
+function fmtsOf(a){const M=CFG.munecos[a]||{},all=onKeys(CFG.formatos);return Array.isArray(M.fmts)&&M.fmts.length?all.filter(k=>M.fmts.includes(k)):all;}
+const NO_ACC=['pulpo','bombero'];
 function defB(){const S=onKeys(CFG.cajas);return {size:S.includes('m')?'m':S[0],rel:onKeys(CFG.rellenos)[0],lazo:onKeys(CFG.lazos)[0],tar:true,items:[]};}
 function sanM(m){
   m=Object.assign(defM(m&&m.a),m||{});const L=lanasOn();
   if(!onKeys(CFG.munecos).includes(m.a))m.a=onKeys(CFG.munecos)[0];
-  if(!onKeys(CFG.formatos).includes(m.fmt))m.fmt=onKeys(CFG.formatos)[0];
+  const FM=fmtsOf(m.a);if(!FM.includes(m.fmt))m.fmt=FM.includes('mediano')?'mediano':FM[0];
+  const PE=onKeys(CFG.pulpoEstilos||{rectos:{}});if(!PE.includes(m.pt))m.pt=PE[0]||'rectos';
+  m.ln=m.ln==='felpa'&&CFG.lanaFelpa&&CFG.lanaFelpa.on!==false?'felpa':'normal';
+  if(NO_ACC.includes(m.a)&&m.acc!=='ninguno')m.acc='ninguno';
   ['c1','c2','ca'].forEach(k=>{if(!L.includes(m[k]))m[k]=L[0];});
   if(!onKeys(CFG.accesorios).includes(m.acc))m.acc=onKeys(CFG.accesorios)[0]||'ninguno';
   m.tag=CFG.etiquetaNombre&&CFG.etiquetaNombre.on!==false?String(m.tag||'').slice(0,12):'';
@@ -2158,9 +2510,9 @@ function sanB(b){
   if(!onKeys(CFG.rellenos).includes(b.rel))b.rel=onKeys(CFG.rellenos)[0];if(!onKeys(CFG.lazos).includes(b.lazo))b.lazo=onKeys(CFG.lazos)[0];
   b.items=(Array.isArray(b.items)?b.items:[]).slice(0,12).map(sanItem).filter(it=>it.t!=='taza'||CFG.taza.on!==false);b.tar=!!b.tar;return b;
 }
-function sanitize(s){sanitizeRopa(s);if(!['ropa','muneco','caja'].includes(s.mode))s.mode='ropa';s.m=sanM(s.m);s.b=sanB(s.b);return s;}
+function sanitize(s){sanitizeRopa(s);if(!['ropa','muneco','caja','llavero'].includes(s.mode))s.mode='ropa';s.m=sanM(s.m);s.b=sanB(s.b);s.l=sanL(s.l);return s;}
 /* precios y espacio */
-function munecoPrice(m){const F=CFG.formatos[m.fmt]||{},A=CFG.accesorios[m.acc]||{};return (+F.precio||0)+(+A.precio||0)+(m.tag?(+CFG.etiquetaNombre.precio||0):0);}
+function munecoPrice(m){const F=CFG.formatos[m.fmt]||{},A=CFG.accesorios[m.acc]||{};return (+F.precio||0)+(+A.precio||0)+(m.tag?(+CFG.etiquetaNombre.precio||0):0)+(m.ln==='felpa'?(+(CFG.lanaFelpa||{}).precio||0):0);}
 function itemPrice(it){if(it.t==='muneco')return munecoPrice(it);if(it.t==='taza')return +CFG.taza.precio||0;const T=tallasOn(it.p).find(x=>x.id===it.tl);return T?+T.precio||0:0;}
 function itemSpace(it){const E=CFG.espacio||{};if(it.t==='muneco')return +E[it.fmt]||2;if(it.t==='taza')return +E.taza||2;return it.p==='babero'?(+E.babero||1):(+E.body||2);}
 const used=b=>b.items.reduce((a,it)=>a+itemSpace(it),0);
@@ -2173,7 +2525,7 @@ function itemLabel(it){
   const T=tallasOn(it.p).find(x=>x.id===it.tl)||{};return `${CFG.prendas[it.p].icon||'👶'} ${CFG.prendas[it.p].label} ${T.label||''}`;
 }
 function itemDesc(it){
-  if(it.t==='muneco'){const p=[`color ${it.c1.toLowerCase()} y ${it.c2.toLowerCase()}`];if(it.acc!=='ninguno')p.push(`${CFG.accesorios[it.acc].label.toLowerCase()} ${it.ca.toLowerCase()}`);if(it.tag)p.push(`etiqueta "${it.tag}"`);return p.join(', ');}
+  if(it.t==='muneco'){const p=[`color ${it.c1.toLowerCase()} y ${it.c2.toLowerCase()}`];if(it.a==='pulpo')p.push(((CFG.pulpoEstilos||{})[it.pt]||{label:''}).label.toLowerCase());if(it.ln==='felpa')p.push('lana felpa');if(it.acc!=='ninguno')p.push(`${CFG.accesorios[it.acc].label.toLowerCase()} ${it.ca.toLowerCase()}`);if(it.tag)p.push(`etiqueta "${it.tag}"`);return p.join(', ');}
   if(it.t==='taza')return `"${oneLine(it.txt)}" en ${it.k.toLowerCase()}, interior ${it.ci.toLowerCase()}`;
   return [`tela ${it.c.toLowerCase()}`,it.n?`nombre "${it.n}" en ${it.k.toLowerCase()}`:'',it.i?`dibujo ${CFG.iconos[it.i].label.toLowerCase()}`:''].filter(Boolean).join(', ');
 }
@@ -2194,6 +2546,9 @@ const swatches=(o,keys)=>keys.map(k=>`<button data-v="${esc(k)}" style="backgrou
 function buildDesignerUI(){
   buildRopaUI();
   $('optAnimal').innerHTML=onKeys(CFG.munecos).map(k=>`<button class="chip big" data-v="${k}"><i>${CFG.munecos[k].e}</i><span>${esc(CFG.munecos[k].label)}</span></button>`).join('');
+  $('optPt').innerHTML=onKeys(CFG.pulpoEstilos||{}).map(k=>`<button class="chip" data-v="${k}">${esc(CFG.pulpoEstilos[k].label)}</button>`).join('');
+  const LF=CFG.lanaFelpa;$('lnWrap').classList.toggle('hidden',!(LF&&LF.on!==false));
+  $('optLn').innerHTML=`<button class="chip" data-v="normal">Lana normal<small>acabado clásico</small></button>`+(LF?`<button class="chip" data-v="felpa">${esc(LF.label)}<small>suavecita · +${money(LF.precio)}</small></button>`:'');
   $('optFmt').innerHTML=onKeys(CFG.formatos).map(k=>{const F=CFG.formatos[k];return `<button class="chip" data-v="${k}">${esc(F.label)}<small>${F.alto} cm · ${money(F.precio)}</small></button>`;}).join('');
   ['optC1','optC2','optCa'].forEach(id=>$(id).innerHTML=swatches(CFG.lanas,lanasOn()));
   $('optAcc').innerHTML=onKeys(CFG.accesorios).map(k=>`<button class="chip" data-v="${k}">${esc(CFG.accesorios[k].label)}${+CFG.accesorios[k].precio?`<small>+${money(CFG.accesorios[k].precio)}</small>`:''}</button>`).join('');
@@ -2223,6 +2578,10 @@ function renderItems(){
       <label>Formato<select data-ip="${i}.fmt">${opts(onKeys(CFG.formatos).map(k=>[k,CFG.formatos[k].label+' '+CFG.formatos[k].alto+' cm']),it.fmt)}</select></label>
       <label>Color principal<select data-ip="${i}.c1">${opts(lan,it.c1)}</select></label><label>Color de detalle<select data-ip="${i}.c2">${opts(lan,it.c2)}</select></label>
       <label>Accesorio<select data-ip="${i}.acc">${opts(onKeys(CFG.accesorios).map(k=>[k,CFG.accesorios[k].label]),it.acc)}</select></label><label>Color accesorio<select data-ip="${i}.ca">${opts(lan,it.ca)}</select></label>`;
+    else if(it.t==='llavero')g=`<label>Forma<select data-ip="${i}.sh">${opts(onKeys(CFG.llaveros).map(k=>[k,CFG.llaveros[k].label]),it.sh)}</select></label>
+      <label>Fondo<select data-ip="${i}.bg">${opts(onKeys(CFG.llaveroFondos).map(k=>[k,k]),it.bg)}</select></label>
+      <label>Texto<input data-ip="${i}.n" value="${esc(oneLine(it.n))}" maxlength="${CFG.maxNombre}" placeholder="Ej. Mateo"></label><label>Color del texto<select data-ip="${i}.k">${opts(tin,it.k)}</select></label>
+      <label class="full">Dibujo<select data-ip="${i}.i">${opts(ico,it.i)}</select></label>`;
     else if(it.t==='taza')g=`<label class="full">Texto (Enter para otra línea)<textarea rows="2" data-ip="${i}.txt">${esc(it.txt)}</textarea></label>
       <label>Color del texto<select data-ip="${i}.k">${opts(tin,it.k)}</select></label><label>Color interior y asa<select data-ip="${i}.ci">${opts(onKeys(CFG.tazaColores).map(k=>[k,k]),it.ci)}</select></label>
       <label>Letra<select data-ip="${i}.f">${opts(onKeys(CFG.fuentes).map(k=>[k,CFG.fuentes[k].label]),it.f)}</select></label><label>Dibujo<select data-ip="${i}.i">${opts(ico,it.i)}</select></label>`;
@@ -2244,9 +2603,13 @@ function addItem(it){
   renderItems();changed();
 }
 function syncMuneco(){
-  const m=st.m;sel('optAnimal',m.a);sel('optFmt',m.fmt);sel('optC1',m.c1);sel('optC2',m.c2);sel('optCa',m.ca);sel('optAcc',m.acc);
+  const m=st.m,FM=fmtsOf(m.a);$('optFmt').querySelectorAll('[data-v]').forEach(b=>b.classList.toggle('hidden',!FM.includes(b.dataset.v)));
+  $('ptWrap').classList.toggle('hidden',m.a!=='pulpo');sel('optPt',m.pt);sel('optLn',m.ln);
+  $('accWrap').classList.toggle('hidden',NO_ACC.includes(m.a));
+  sel('optAnimal',m.a);sel('optFmt',m.fmt);sel('optC1',m.c1);sel('optC2',m.c2);sel('optCa',m.ca);sel('optAcc',m.acc);
   $('c1Name').textContent=m.c1;$('c2Name').textContent=m.c2;$('caName').textContent=m.ca;$('caWrap').classList.toggle('hidden',m.acc==='ninguno');
-  $('c2Help').textContent={oso:'Hocico, pancita y patitas',conejo:'Hocico y pancita',vaca:'Manchas',jirafa:'Manchas, cuernitos y patitas',leon:'Melena y patitas',elefante:'Interior de las orejas',gato:'Hocico y pancita'}[m.a]||'Detalles';
+  $('c2Help').textContent={oso:'Hocico, pancita y patitas',conejo:'Hocico y pancita',vaca:'Manchas',jirafa:'Manchas, cuernitos y patitas',leon:'Melena y patitas',elefante:'Interior de las orejas',gato:'Hocico y pancita',perrito:'Orejas',torito:'Orejas, cuernos y pezuñas',pulpo:'Tentáculos',bombero:'Franjas del uniforme y manguera'}[m.a]||'Detalles';
+  $('c1Label').textContent=m.a==='pulpo'?'Color de la cabeza':m.a==='bombero'?'Color del uniforme':'Color principal';
   if(document.activeElement!==$('inTag'))$('inTag').value=m.tag;
   const p=munecoPrice(m);$('sumM').innerHTML=`<b>${esc(designName(st))}</b><br>${esc(designDesc(st))}<br>${money(p)} c/u${st.q>1?` × ${st.q} = <b>${money(p*st.q)}</b>`:''}`;
 }
@@ -2273,18 +2636,19 @@ function syncUI(){
 function bindExtra(){
   $('optMode').addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(b&&b.dataset.v!==st.mode){if(st.mode==='caja'||b.dataset.v==='caja')renderItems();setMode(b.dataset.v);}});
   const pick=(id,obj,key,after)=>$(id).addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;obj()[key]=b.dataset.v;if(after)after(b.dataset.v);changed();});
-  pick('optAnimal',()=>st.m,'a',a=>{const M=CFG.munecos[a];if(M.c1)st.m.c1=M.c1;if(M.c2)st.m.c2=M.c2;});
-  pick('optFmt',()=>st.m,'fmt');pick('optC1',()=>st.m,'c1');pick('optC2',()=>st.m,'c2');pick('optCa',()=>st.m,'ca');pick('optAcc',()=>st.m,'acc');
+  pick('optAnimal',()=>st.m,'a',a=>{const M=CFG.munecos[a];if(M.c1)st.m.c1=M.c1;if(M.c2)st.m.c2=M.c2;st.m.ln=M.ln||'normal';if(NO_ACC.includes(a))st.m.acc='ninguno';});
+  pick('optPt',()=>st.m,'pt');pick('optLn',()=>st.m,'ln');
+  pick('optFmt',()=>st.m,'fmt');pick('optC1',()=>st.m,'c1');pick('optC2',()=>st.m,'c2');pick('optCa',()=>st.m,'ca');pick('optAcc',()=>st.m,'acc',v=>{if(v==='flor'&&st.m.ca==='Rojo')st.m.ca='Amarillo';});
   $('inTag').addEventListener('input',()=>{st.m.tag=$('inTag').value;changed();});
   pick('optSize',()=>st.b,'size',v=>{if(used(st.b)>+CFG.cajas[v].cap){showToast('Lo que elegiste no entra en esa caja');fitBox(st.b,true);}});
   pick('optRel',()=>st.b,'rel');pick('optLazo',()=>st.b,'lazo');
   $('chkTar').addEventListener('change',()=>{st.b.tar=$('chkTar').checked;changed();});
   document.querySelectorAll('[data-qd]').forEach(b=>b.addEventListener('click',()=>{st.q+=+b.dataset.qd;changed();}));
   $('addBtns').addEventListener('click',e=>{const b=e.target.closest('[data-add-item]');if(!b)return;const t=b.dataset.addItem;
-    addItem(t==='muneco'?Object.assign({t:'muneco'},defM()):t==='taza'?{t:'taza'}:{t:'body',p:'body_mc',n:'',k:'Celeste',i:'osito'});});
+    if(t==='llavero')return;addItem(t==='muneco'?Object.assign({t:'muneco'},defM()):t==='taza'?{t:'taza'}:{t:'body',p:'body_mc',n:'',k:'Celeste',i:'osito'});});
   document.querySelectorAll('[data-add-mine]').forEach(b=>b.addEventListener('click',()=>{
     if(b.dataset.addMine==='muneco')addItem(Object.assign({t:'muneco'},st.m));
-    else addItem({t:'body',p:st.p,tl:st.t,c:st.c,n:linesOf(st.n)[0]||'',i:st.i!=='foto'?st.i:'',k:st.k,f:st.f});}));
+    else if(b.dataset.addMine==='ropa')addItem({t:'body',p:st.p,tl:st.t,c:st.c,n:linesOf(st.n)[0]||'',i:st.i!=='foto'?st.i:'',k:st.k,f:st.f});}));
   $('itemList').addEventListener('click',e=>{const d=e.target.closest('[data-idel]');if(!d)return;st.b.items.splice(+d.dataset.idel,1);renderItems();changed();});
   const onEdit=e=>{const el=e.target.closest('[data-ip]');if(!el)return;const [i,k]=el.dataset.ip.split('.'),it=st.b.items[+i];if(!it)return;
     it[k]=el.value;if(k==='a'){const M=CFG.munecos[el.value];it.c1=M.c1||it.c1;it.c2=M.c2||it.c2;}
@@ -2297,6 +2661,173 @@ function bindExtra(){
   $('mToBox').onclick=()=>{const it=Object.assign({t:'muneco'},st.m);setMode('caja',true);addItem(it);goStep(1);};
   document.querySelectorAll('[data-open-mode]').forEach(a=>a.addEventListener('click',()=>{st.mode=a.dataset.openMode;setTimeout(()=>{renderItems();setMode(st.mode);},60);}));
 }
+
+/* ════════════ LLAVEROS + AJUSTE DE ELEMENTOS (tamaño y posición) ════════════ */
+function TF0(){return {s:100,x:0,y:0};}
+function defTf(){return {f:{pic:TF0(),txt:TF0(),fr:TF0()},b:{pic:TF0(),txt:TF0()}};}
+function sanOne(t){t=t||{};const c=(v,a,b,d)=>{v=Math.round(+v);return isFinite(v)?Math.max(a,Math.min(b,v)):d;};return {s:c(t.s,30,200,100),x:c(t.x,-50,50,0),y:c(t.y,-50,50,0)};}
+function sanTf(tf){tf=tf||{};const o={};['f','b'].forEach(sd=>{o[sd]={};['pic','txt','fr'].forEach(k=>o[sd][k]=sanOne((tf[sd]||{})[k]));});return o;}
+function defL(){const S=onKeys(CFG.llaveros),B=onKeys(CFG.llaveroFondos);return {sh:S.includes('corazon')?'corazon':S[0],bg:B[0],bd:true,n:'',f:'redonda',k:'Azul marino',i:'osito',nb:'',tf:{pic:TF0(),txt:TF0()},tfb:{txt:TF0()}};}
+function sanL(l){
+  l=Object.assign(defL(),l||{});const S=onKeys(CFG.llaveros);if(!S.includes(l.sh))l.sh=S[0];const B=onKeys(CFG.llaveroFondos);if(!B.includes(l.bg))l.bg=B[0];
+  const K=onKeys(CFG.tintas),F=onKeys(CFG.fuentes);if(!K.includes(l.k))l.k=K[0];if(!F.includes(l.f))l.f=F[0];
+  if(l.i&&l.i!=='foto'&&!(CFG.iconos[l.i]&&CFG.iconos[l.i].on!==false))l.i='';
+  l.n=cleanLines(l.n);l.nb=CFG.llaveroReverso&&CFG.llaveroReverso.on!==false?cleanLines(l.nb):'';l.bd=!!l.bd;
+  l.tf={pic:sanOne((l.tf||{}).pic),txt:sanOne((l.tf||{}).txt)};l.tfb={txt:sanOne((l.tfb||{}).txt)};return l;
+}
+const llaveroPrice=l=>(+((CFG.llaveros[l.sh]||{}).precio)||0)+(linesOf(l.nb).length?(+CFG.llaveroReverso.precio||0):0);
+function cfgUsesImage(c){if(!c)return false;if(c.mode==='llavero')return c.l&&c.l.i==='foto';if(c.mode==='muneco'||c.mode==='caja')return false;return c.i==='foto'||!!c.ib;}
+/* ampliar las funciones de muñeco/caja con el llavero */
+const _sanItem=sanItem;sanItem=function(it){if(it.t==='llavero'){const l=sanL(it);return {t:'llavero',sh:l.sh,bg:l.bg,bd:l.bd,n:linesOf(l.n).slice(0,2).join('\n'),f:l.f,k:l.k,i:l.i==='foto'?'':l.i,tf:l.tf};}return _sanItem(it);};
+const _itemPrice=itemPrice;itemPrice=function(it){return it.t==='llavero'?(+((CFG.llaveros[it.sh]||{}).precio)||0):_itemPrice(it);};
+const _itemSpace=itemSpace;itemSpace=function(it){return it.t==='llavero'?(+(CFG.espacio||{}).llaveroMdf||1):_itemSpace(it);};
+const _itemLabel=itemLabel;itemLabel=function(it){return it.t==='llavero'?`🔑 Llavero ${((CFG.llaveros[it.sh]||{}).label||'').toLowerCase()}`:_itemLabel(it);};
+const _itemDesc=itemDesc;itemDesc=function(it){if(it.t!=='llavero')return _itemDesc(it);
+  return [`fondo ${it.bg.toLowerCase()}`,linesOf(it.n).length?`texto "${oneLine(it.n)}" en ${it.k.toLowerCase()}`:'',it.i&&CFG.iconos[it.i]?`dibujo ${CFG.iconos[it.i].label.toLowerCase()}`:''].filter(Boolean).join(', ');};
+const _unitPrice=unitPrice;unitPrice=function(s){return s.mode==='llavero'?llaveroPrice(s.l):_unitPrice(s);};
+const _designName=designName;designName=function(s){return s.mode==='llavero'?`Llavero ${CFG.llaveros[s.l.sh].label.toLowerCase()}${linesOf(s.l.n).length?` "${linesOf(s.l.n)[0]}"`:''}`:_designName(s);};
+const _designDesc=designDesc;designDesc=function(s){if(s.mode!=='llavero')return _designDesc(s);const L=CFG.llaveros[s.l.sh],l=s.l;
+  return [`${L.w}×${L.h} cm`,`fondo ${l.bg.toLowerCase()}${l.bd?' con borde blanco':''}`,linesOf(l.n).length?`texto "${oneLine(l.n)}" en letra ${CFG.fuentes[l.f].label.toLowerCase()} ${l.k.toLowerCase()}`:'',
+    l.i==='foto'?'imagen propia':l.i&&CFG.iconos[l.i]?`dibujo ${CFG.iconos[l.i].label.toLowerCase()} ${CFG.iconos[l.i].e}`:'',linesOf(l.nb).length?`atrás "${oneLine(l.nb)}"`:''].filter(Boolean).join(' · ');};
+TABS.llavero=['Forma','Diseño','Detalles'];
+
+/* ── panel “Mover y ajustar”: elige un elemento y cambia tamaño y posición ── */
+const TFP={
+  f:{get:()=>st.tf.f,els:()=>[st.i?['pic',st.i==='foto'?'🖼️ Imagen':'🧸 Dibujo']:null,linesOf(st.n).length?['txt','Aa Texto']:null,st.fr?['fr','💬 Frase']:null]},
+  b:{get:()=>st.tf.b,els:()=>[st.ib?['pic','🖼️ Imagen']:null,linesOf(st.nb).length?['txt','Aa Texto']:null]},
+  l:{get:()=>st.l.tf,els:()=>[st.l.i?['pic',st.l.i==='foto'?'🖼️ Imagen':'🧸 Dibujo']:null,linesOf(st.l.n).length?['txt','Aa Texto']:null]},
+  lb:{get:()=>st.l.tfb,els:()=>[linesOf(st.l.nb).length?['txt','Aa Texto de atrás']:null]}
+};
+function mountTf(){
+  document.querySelectorAll('[data-tfp]').forEach(p=>{const id=p.dataset.tfp;
+    p.innerHTML=`<h4>Mover y ajustar <small>elige qué mover</small></h4><div class="tf-el"></div>
+      <div class="rng"><label>Tamaño <b data-tfv="s"></b></label><div><input type="range" min="30" max="200" step="5" data-tfr="s" aria-label="Tamaño"></div></div>
+      <div class="rng"><label>Izquierda ↔ Derecha <b data-tfv="x"></b></label><div><input type="range" min="-50" max="50" step="1" data-tfr="x" aria-label="Posición horizontal"></div></div>
+      <div class="rng"><label>Abajo ↕ Arriba <b data-tfv="y"></b></label><div><input type="range" min="-50" max="50" step="1" data-tfr="y" aria-label="Posición vertical"></div></div>
+      <button class="chip tf-reset" data-tfreset>↺ Volver al centro</button>`;
+    p.addEventListener('click',e=>{const b=e.target.closest('[data-tfel]');if(b){DS.tfSel[id]=b.dataset.tfel;syncTf();}
+      if(e.target.closest('[data-tfreset]')){const k=DS.tfSel[id];if(k){TFP[id].get()[k]=TF0();changed();}}});
+    p.addEventListener('input',e=>{const r=e.target.closest('[data-tfr]'),k=DS.tfSel[id];if(!r||!k)return;TFP[id].get()[k][r.dataset.tfr]=+r.value;changed();});
+  });
+}
+function syncTf(){
+  document.querySelectorAll('[data-tfp]').forEach(p=>{const id=p.dataset.tfp,els=TFP[id].els().filter(Boolean);
+    p.classList.toggle('hidden',!els.length);if(!els.length)return;
+    if(!els.some(e=>e[0]===DS.tfSel[id]))DS.tfSel[id]=els[0][0];const k=DS.tfSel[id],v=TFP[id].get()[k]||TF0();
+    p.querySelector('.tf-el').innerHTML=els.length>1?els.map(([e,l])=>`<button data-tfel="${e}" class="${e===k?'on':''}">${l}</button>`).join(''):`<span class="note" style="margin:0">${els[0][1]}</span>`;
+    p.querySelectorAll('[data-tfr]').forEach(r=>{if(document.activeElement!==r)r.value=v[r.dataset.tfr];});
+    p.querySelector('[data-tfv="s"]').textContent=v.s+'%';
+    p.querySelector('[data-tfv="x"]').textContent=v.x?(v.x>0?'→ ':'← ')+Math.abs(v.x):'centro';
+    p.querySelector('[data-tfv="y"]').textContent=v.y?(v.y>0?'↑ ':'↓ ')+Math.abs(v.y):'centro';
+  });
+}
+/* ── interfaz del llavero ── */
+function buildLlaveroUI(){
+  $('optLShape').innerHTML=onKeys(CFG.llaveros).map(k=>{const L=CFG.llaveros[k];return `<button class="chip big" data-v="${k}"><i>${PQB.GLYPH[k]||'🔑'}</i><span>${esc(L.label)}<small>${L.w}×${L.h} cm · ${money(L.precio)}</small></span></button>`;}).join('');
+  $('optLBg').innerHTML=swatches(CFG.llaveroFondos,onKeys(CFG.llaveroFondos));
+  $('optLTinta').innerHTML=swatches(CFG.tintas,onKeys(CFG.tintas));
+  $('optLFuente').innerHTML=onKeys(CFG.fuentes).map(k=>{const F=CFG.fuentes[k];return `<button class="chip" data-v="${k}" style="font-family:'${F.font}';font-weight:${F.weight};font-size:16px">${esc(F.label)}</button>`;}).join('');
+  $('optLIcono').innerHTML=`<button data-v=""><span>∅</span><small>Ninguno</small></button><button data-v="foto">🖼️<small>Tu imagen</small></button>`+
+    onKeys(CFG.iconos).map(k=>`<button data-v="${k}" aria-label="${esc(CFG.iconos[k].label)}">${CFG.iconos[k].e}<small>${esc(CFG.iconos[k].label)}</small></button>`).join('');
+  const R=CFG.llaveroReverso;$('lBackWrap').classList.toggle('hidden',!(R&&R.on!==false));$('lBackPrice').textContent=R?'+'+money(R.precio):'';
+  $('inLName').placeholder=$('inLBack').placeholder||'';$('inLName').placeholder='Ej. Mateo\n(Enter para otra línea)';
+  document.querySelector('[data-add-item="llavero"]').classList.toggle('hidden',!onKeys(CFG.llaveros).length);
+  document.querySelector('#optMode [data-v="llavero"]').classList.toggle('hidden',!onKeys(CFG.llaveros).length);
+}
+function syncLlavero(){
+  const l=st.l;sel('optLShape',l.sh);sel('optLBg',l.bg);sel('optLTinta',l.k);sel('optLFuente',l.f);sel('optLIcono',l.i);
+  $('lbgName').textContent=l.bg;$('lInkName').textContent=l.k;$('chkLBd').checked=l.bd;
+  if(document.activeElement!==$('inLName')&&$('inLName').value!==l.n)$('inLName').value=l.n;
+  if(document.activeElement!==$('inLBack')&&$('inLBack').value!==l.nb)$('inLBack').value=l.nb;
+  $('inLName').rows=Math.min(3,Math.max(1,l.n.split('\n').length));$('inLBack').rows=Math.min(3,Math.max(1,l.nb.split('\n').length));
+  const n=l.n.split('\n').length;$('lNameCnt').textContent=`${n}/${MAX_LINES} línea${n>1?'s':''} · máx. ${CFG.maxNombre} letras por línea`;
+  const nl=$('imgNoteL');nl.classList.toggle('hidden',l.i!=='foto');if(l.i==='foto')nl.innerHTML=imgNote('l');
+  const p=llaveroPrice(l);$('sumL').innerHTML=`<b>${esc(designName(st))}</b><br>${esc(designDesc(st))}<br>${money(p)} c/u${st.q>1?` × ${st.q} = <b>${money(p*st.q)}</b>`:''}`;
+}
+function bindLlavero(){
+  const pick=(id,key,after)=>$(id).addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;st.l[key]=b.dataset.v;if(after)after(b.dataset.v);changed();});
+  pick('optLShape','sh');pick('optLBg','bg');pick('optLTinta','k');pick('optLFuente','f');
+  pick('optLIcono','i',v=>{if(v==='foto'&&!DS.img.l)$('inFotoL').click();});
+  $('chkLBd').addEventListener('change',()=>{st.l.bd=$('chkLBd').checked;changed();});
+  const lim=el=>{const v=cleanLines(el.value);if(v!==el.value){const p=el.selectionStart;el.value=v;el.selectionStart=el.selectionEnd=Math.min(p,v.length);}return v;};
+  $('inLName').addEventListener('input',()=>{st.l.n=lim($('inLName'));changed();});
+  $('inLBack').addEventListener('input',()=>{st.l.nb=lim($('inLBack'));changed();});
+  $('inFotoL').addEventListener('change',e=>{loadImageFor('l',e.target.files&&e.target.files[0]);e.target.value='';});
+  $('lToBox').onclick=()=>{const it=Object.assign({t:'llavero'},st.l);setMode('caja',true);addItem(it);goStep(1);};
+  document.querySelector('[data-add-mine="llavero"]').addEventListener('click',()=>addItem(Object.assign({t:'llavero'},st.l)));
+  $('addBtns').addEventListener('click',e=>{const b=e.target.closest('[data-add-item="llavero"]');if(b)addItem(Object.assign({t:'llavero'},defL()));});
+  mountTf();
+}
+const _buildDesignerUI=buildDesignerUI;buildDesignerUI=function(){_buildDesignerUI();buildLlaveroUI();};
+const _syncUI=syncUI;syncUI=function(){_syncUI();syncLlavero();syncTf();const u=unitPrice(st);$('bdPrice').textContent=money(u*st.q);};
+const _bindExtra=bindExtra;bindExtra=function(){_bindExtra();bindLlavero();};
+
+/* ════════════ ENTREGADOS (galería de pedidos entregados) ════════════ */
+let DLV=[],dlvCity='all',dlvShown=9,dlvIx=0,dlvList=[],dlvM=0;
+const dlvMedia=r=>Array.isArray(r.media)&&r.media.length?r.media:(r.photo?[{type:'img',url:r.photo}]:[]);
+const cityName=c=>{c=String(c||'').trim();return c?c.charAt(0).toUpperCase()+c.slice(1):'';};
+const dlvDate=d=>{if(!d)return '';const x=new Date(d+'T12:00:00');return isNaN(x)?'':x.toLocaleDateString('es-EC',{month:'long',year:'numeric'});};
+async function loadDelivered(){
+  try{
+    if(!sb)return;
+    const {data,error}=await sb.from('showcase').select('id,photo,media,title,city,category,delivered_on,note,featured')
+      .eq('biz',BIZ_ID).eq('published',true).order('featured',{ascending:false}).order('delivered_on',{ascending:false,nullsFirst:false}).order('created_at',{ascending:false}).limit(300);
+    if(error)throw error;
+    DLV=(data||[]).filter(r=>r.photo).map(r=>Object.assign(r,{city:cityName(r.city)}));
+  }catch(e){console.warn('Galería no disponible:',e.message||e);DLV=[];}
+  const on=DLV.length>0;$('entregados').classList.toggle('hidden',!on);document.querySelectorAll('[data-dlv-link]').forEach(a=>a.classList.toggle('hidden',!on));
+  if(on)renderDelivered(true);
+}
+function dlvCities(){const m={};DLV.forEach(r=>{if(r.city)m[r.city]=(m[r.city]||0)+1;});return Object.entries(m).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'es'));}
+function countUp(el,to){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=to;return;}
+  el.textContent='0';new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();const t0=performance.now(),d=1100;
+    const f=t=>{const k=Math.min(1,(t-t0)/d);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f);};requestAnimationFrame(f);}).observe(el);}
+function renderDelivered(first){
+  const C=dlvCities();
+  if(first){countUp($('dlvN'),DLV.length);countUp($('dlvC'),C.length);
+    const rib=C.map(([c])=>`<span>📍 ${esc(c)}</span>`).join('');$('dlvRibbon').innerHTML=rib+rib;$('dlvRibbon').parentElement.classList.toggle('hidden',C.length<2);}
+  $('dlvCities').innerHTML=`<button data-city="all" class="${dlvCity==='all'?'on':''}">Todas<small>${DLV.length}</small></button>`+
+    C.map(([c,n])=>`<button data-city="${esc(c)}" class="${dlvCity===c?'on':''}">📍 ${esc(c)}<small>${n}</small></button>`).join('');
+  dlvList=DLV.filter(r=>dlvCity==='all'||r.city===dlvCity);
+  $('dlvGrid').innerHTML=dlvList.slice(0,dlvShown).map((r,i)=>`<button class="dlv-c" data-dlv="${i}" style="animation-delay:${Math.min(i%9,8)*60}ms" aria-label="${esc((r.title||'Pedido entregado')+(r.city?' en '+r.city:''))}">
+      <img src="${esc(r.photo)}" alt="${esc(r.title||'Pedido entregado')}" loading="lazy">
+      ${r.city?`<span class="dlv-pin">📍 ${esc(r.city)}</span>`:''}${r.featured?'<span class="dlv-star">⭐</span>':''}
+      ${(()=>{const M=dlvMedia(r),v=M.some(m=>m.type==='video');return M.length>1||v?`<span class="dlv-cnt">${v?'▶ video':''}${v&&M.length>1?' · ':''}${M.length>1?'📷 '+M.length:''}</span>`:'';})()}
+      ${r.title||r.delivered_on?`<span class="dlv-cap">${r.title?`<b>${esc(r.title)}</b>`:''}<span>${esc(dlvDate(r.delivered_on))}</span></span>`:''}
+    </button>`).join('');
+  $('dlvMoreW').classList.toggle('hidden',dlvList.length<=dlvShown);
+}
+$('dlvCities').addEventListener('click',e=>{const b=e.target.closest('[data-city]');if(!b)return;dlvCity=b.dataset.city;dlvShown=9;renderDelivered();});
+$('dlvMore').onclick=()=>{dlvShown+=9;renderDelivered();};
+$('dlvGrid').addEventListener('click',e=>{const c=e.target.closest('[data-dlv]');if(c)openDlv(+c.dataset.dlv);});
+function showDlvMedia(j){
+  const r=dlvList[dlvIx],M=dlvMedia(r);dlvM=(j+M.length)%M.length;const m=M[dlvM]||{};
+  const v=$('dlvVid');v.pause();
+  if(m.type==='video'){$('dlvImg').classList.add('hidden');v.classList.remove('hidden');v.poster=m.poster||'';v.src=m.url;v.play().catch(()=>{});}
+  else{v.removeAttribute('src');v.load();v.classList.add('hidden');$('dlvImg').classList.remove('hidden');$('dlvImg').src=m.url||r.photo;}
+  $('dlvThumbs').innerHTML=M.length>1?M.map((x,k)=>`<button data-dm="${k}" class="${k===dlvM?'on':''}" aria-label="Ver ${k+1}"><img src="${esc(x.type==='video'?(x.poster||r.photo):x.url)}" alt="">${x.type==='video'?'<i>▶</i>':''}</button>`).join(''):'';
+}
+function openDlv(i){
+  dlvIx=(i+dlvList.length)%dlvList.length;const r=dlvList[dlvIx];if(!r)return;
+  $('dlvImg').alt=r.title||'Pedido entregado';showDlvMedia(0);
+  $('dlvPin').textContent=r.city?'📍 Entregado en '+r.city:'📍 Entregado';$('dlvPin').classList.remove('hidden');
+  $('dlvT').textContent=r.title||r.category||'Pedido entregado';
+  $('dlvD').textContent=[r.category&&r.title?r.category:'',dlvDate(r.delivered_on)].filter(Boolean).join(' · ');
+  $('dlvNote').textContent=r.note?`“${r.note}”`:'';
+  $('dlvWa').href=waLink(`¡Hola ${BIZ.name}! 💙 Vi en su galería de entregados: *${r.title||'un pedido'}*${r.city?' (entregado en '+r.city+')':''}. Quiero algo así.\n${r.photo}`);
+  const multi=dlvList.length>1;$('dlvPrev').classList.toggle('hidden',!multi);$('dlvNext').classList.toggle('hidden',!multi);
+  $('dlvBox').classList.add('open');document.body.style.overflow='hidden';updateBar&&updateBar();
+}
+function closeDlv(){$('dlvVid').pause();$('dlvBox').classList.remove('open');document.body.style.overflow='';updateBar&&updateBar();}
+$('dlvClose').onclick=closeDlv;$('dlvThumbs').addEventListener('click',e=>{const b=e.target.closest('[data-dm]');if(b)showDlvMedia(+b.dataset.dm);});$('dlvPrev').onclick=()=>openDlv(dlvIx-1);$('dlvNext').onclick=()=>openDlv(dlvIx+1);
+$('dlvBox').addEventListener('click',e=>{if(e.target===$('dlvBox'))closeDlv();});
+document.addEventListener('keydown',e=>{if(!$('dlvBox').classList.contains('open'))return;if(e.key==='Escape')closeDlv();if(e.key==='ArrowLeft')openDlv(dlvIx-1);if(e.key==='ArrowRight')openDlv(dlvIx+1);});
+let dlvX=null;$('dlvStage').addEventListener('touchstart',e=>{dlvX=e.touches[0].clientX;},{passive:true});
+$('dlvStage').addEventListener('touchend',e=>{if(dlvX==null)return;const dx=e.changedTouches[0].clientX-dlvX;dlvX=null;if(Math.abs(dx)<45)return;const M=dlvMedia(dlvList[dlvIx]);
+  if(M.length>1&&((dx<0&&dlvM<M.length-1)||(dx>0&&dlvM>0)))showDlvMedia(dlvM+(dx<0?1:-1));else openDlv(dlvIx+(dx<0?1:-1));});
+$('dlvDesign').onclick=()=>{const r=dlvList[dlvIx]||{},c=(r.category||'')+' '+(r.title||''),n=norm(c);
+  const m=/muñec|munec|amigur|peluch|sonaj/.test(n)?'muneco':/caja|set|kit/.test(n)?'caja':/llaver/.test(n)?'llavero':'ropa';
+  closeDlv();st.mode=m;renderItems();setMode(m,true);goDesign();};
 /* ── INICIO ── */
 applyBiz();buildDesignerUI();bindDesigner();bindExtra();sanitize(st);renderItems();syncUI();renderCart();
 configReady.then(ok=>{if(ok){buildDesignerUI();sanitize(st);renderItems();changed();}});
@@ -2307,7 +2838,7 @@ function handleHash(){
   if(h.startsWith('#producto-')){const id=h.slice(10),p=findP(id);if(p){const el=$('producto-'+p.id);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});openModal(p.id);}}
   if(h==='#disenar'&&isPhone()){history.replaceState(null,'',location.pathname+location.search);openDesigner();}
 }
-loadData().then(handleHash);
+loadData().then(handleHash);loadDelivered().then(()=>{if(location.hash==='#entregados'&&!$('entregados').classList.contains('hidden'))$('entregados').scrollIntoView();});
 window.addEventListener('hashchange',handleHash);
 // Si el cliente vuelve a la pestaña después de un rato, se actualizan precios y stock
 let lastLoad=Date.now();document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&Date.now()-lastLoad>120000){lastLoad=Date.now();loadData();}});

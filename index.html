@@ -474,11 +474,11 @@ footer{background:var(--cream);}
 .dlv-cities button small{font-weight:700;color:var(--muted);margin-left:4px;}
 .dlv-cities button.on{background:var(--navy);border-color:var(--navy);color:#fff;}
 .dlv-cities button.on small{color:rgba(255,255,255,.75);}
-.dlv-grid{columns:4 230px;column-gap:14px;margin-top:12px;}
-.dlv-c{break-inside:avoid;margin-bottom:14px;border-radius:22px;overflow:hidden;position:relative;cursor:pointer;background:#fff;box-shadow:0 10px 26px rgba(47,85,150,.1);display:block;width:100%;border:none;padding:0;text-align:left;font:inherit;
-  opacity:0;transform:translateY(14px);animation:dlvIn .5s ease forwards;}
-@keyframes dlvIn{to{opacity:1;transform:none;}}
-.dlv-c img{width:100%;display:block;transition:transform .5s;}
+.dlv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:12px;}
+.dlv-c{margin:0;border-radius:22px;overflow:hidden;position:relative;cursor:pointer;background:#eef4fb;box-shadow:0 10px 26px rgba(47,85,150,.1);display:block;width:100%;aspect-ratio:4/5;border:none;padding:0;text-align:left;font:inherit;
+  animation:dlvIn .5s ease both;}
+@keyframes dlvIn{from{transform:translateY(14px);}to{transform:none;}}
+.dlv-c img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
 .dlv-c:hover img{transform:scale(1.04);}
 .dlv-pin{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.94);border-radius:50px;padding:5px 11px;font-size:12.5px;font-weight:800;color:var(--navy);box-shadow:0 4px 10px rgba(0,0,0,.08);}
 .dlv-star{position:absolute;top:10px;right:10px;background:#fff6d6;border-radius:50px;padding:5px 9px;font-size:12px;font-weight:800;color:#a8790a;}
@@ -503,8 +503,8 @@ footer{background:var(--cream);}
 .dlvb-a{display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:14px;}
 .dlvb-a .btn{justify-content:center;}
 @media(max-width:760px){
-  .dlv-grid{columns:2;column-gap:10px;}
-  .dlv-c{margin-bottom:10px;border-radius:18px;}
+  .dlv-grid{grid-template-columns:1fr 1fr;gap:10px;}
+  .dlv-c{border-radius:18px;}
   .dlv-cap{padding:26px 10px 9px;}.dlv-cap b{font-size:13px;}
   .dlv-stats>div{min-width:0;flex:1;padding:12px 10px;}.dlv-stats b{font-size:30px;}
   #dlvBox{padding:0;}
@@ -653,6 +653,8 @@ footer{background:var(--cream);}
 #tReset{background:rgba(255,255,255,.9);}
 @media(min-width:761px){.bd-step .chips::before,.bd-step .sw::before,.bd-step .icons::before,.bd-step .chips::after,.bd-step .sw::after,.bd-step .icons::after{display:none;}}
 .can-l::before,.can-r::after{opacity:.9!important;}
+
+.build-v{display:block;margin-top:6px;font-size:10px;opacity:.55;letter-spacing:.02em;}
 
 button.filter-pill{font-family:'Nunito';}
 </style>
@@ -1026,7 +1028,7 @@ button.filter-pill{font-family:'Nunito';}
       <a href="#como">Cómo pedir</a>
     </div>
   </div>
-  <div class="foot-bottom">© <span id="yr"></span> Peques · Loja, Ecuador · Hecho con amor 💙</div>
+  <div class="foot-bottom">© <span id="yr"></span> Peques · Loja, Ecuador · Hecho con amor 💙<small class="build-v">versión 2026.10.16 · 16:44</small></div>
 </footer>
 
 <div id="floatWa" title="Escríbenos por WhatsApp">💬</div>
@@ -3139,7 +3141,7 @@ async function subirImagenes(num,list){
 }
 
 /* ════════════ ENTREGADOS (galería de pedidos entregados) ════════════ */
-let DLV=[],dlvCity='all',dlvShown=9,dlvIx=0,dlvList=[],dlvM=0;
+let DLV=[],dlvCity='all',dlvShown=12,dlvIx=0,dlvList=[],dlvM=0;
 const dlvMedia=r=>Array.isArray(r.media)&&r.media.length?r.media:(r.photo?[{type:'img',url:r.photo}]:[]);
 const cityName=c=>{c=String(c||'').trim();return c?c.charAt(0).toUpperCase()+c.slice(1):'';};
 const dlvDate=d=>{if(!d)return '';const x=new Date(d+'T12:00:00');return isNaN(x)?'':x.toLocaleDateString('es-EC',{month:'long',year:'numeric'});};
@@ -3173,8 +3175,8 @@ function renderDelivered(first){
     </button>`).join('');
   $('dlvMoreW').classList.toggle('hidden',dlvList.length<=dlvShown);
 }
-$('dlvCities').addEventListener('click',e=>{const b=e.target.closest('[data-city]');if(!b)return;dlvCity=b.dataset.city;dlvShown=9;renderDelivered();});
-$('dlvMore').onclick=()=>{dlvShown+=9;renderDelivered();};
+$('dlvCities').addEventListener('click',e=>{const b=e.target.closest('[data-city]');if(!b)return;dlvCity=b.dataset.city;dlvShown=12;renderDelivered();});
+$('dlvMore').onclick=()=>{dlvShown+=12;renderDelivered();};
 $('dlvGrid').addEventListener('click',e=>{const c=e.target.closest('[data-dlv]');if(c)openDlv(+c.dataset.dlv);});
 function showDlvMedia(j){
   const r=dlvList[dlvIx],M=dlvMedia(r);dlvM=(j+M.length)%M.length;const m=M[dlvM]||{};

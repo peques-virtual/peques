@@ -476,8 +476,8 @@ footer{background:var(--cream);}
 .dlv-cities button.on small{color:rgba(255,255,255,.75);}
 .dlv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:12px;}
 .dlv-c{margin:0;border-radius:22px;overflow:hidden;position:relative;cursor:pointer;background:#eef4fb;box-shadow:0 10px 26px rgba(47,85,150,.1);display:block;width:100%;aspect-ratio:4/5;border:none;padding:0;text-align:left;font:inherit;
-  animation:dlvIn .5s ease both;}
-@keyframes dlvIn{from{transform:translateY(14px);}to{transform:none;}}
+  animation:dlvIn .45s ease;}
+@keyframes dlvIn{from{opacity:0;}to{opacity:1;}}
 .dlv-c img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
 .dlv-c:hover img{transform:scale(1.04);}
 .dlv-pin{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.94);border-radius:50px;padding:5px 11px;font-size:12.5px;font-weight:800;color:var(--navy);box-shadow:0 4px 10px rgba(0,0,0,.08);}
@@ -694,8 +694,9 @@ footer{background:var(--cream);}
 .ptabs button.on{background:linear-gradient(135deg,var(--navy),#203f78);color:#fff;box-shadow:0 8px 18px rgba(32,63,120,.28);}
 .ptabs button.on small{color:rgba(255,255,255,.82);}
 .tabpane{display:none;padding-top:8px;}
-.tabpane.on{display:block;animation:paneIn .3s ease both;}
-@keyframes paneIn{from{transform:translateY(8px);}to{transform:none;}}
+.tabpane.on{display:block;animation:paneIn .25s ease;}
+/* solo opacidad: un transform aquí impediría que el diseñador y las ventanas ocupen la pantalla completa */
+@keyframes paneIn{from{opacity:0;}to{opacity:1;}}
 .tabpane .sec-head{margin-top:26px;}
 .tabpane .ds,.tabpane .dlv{margin-top:26px;}
 @media(max-width:760px){
@@ -1149,7 +1150,7 @@ button.filter-pill{font-family:'Nunito';}
       <a href="#como">Cómo pedir</a>
     </div>
   </div>
-  <div class="foot-bottom">© <span id="yr"></span> Peques · Loja, Ecuador · Hecho con amor 💙<small class="build-v">versión 2026.10.18 · 12:11</small></div>
+  <div class="foot-bottom">© <span id="yr"></span> Peques · Loja, Ecuador · Hecho con amor 💙<small class="build-v">versión 2026.10.18 · 13:47</small></div>
 </footer>
 
 <div id="floatWa" title="Escríbenos por WhatsApp">💬</div>
@@ -3369,12 +3370,17 @@ $('dlvStage').addEventListener('touchend',e=>{if(dlvX==null)return;const dx=e.ch
   if(M.length>1&&((dx<0&&dlvM<M.length-1)||(dx>0&&dlvM>0)))showDlvMedia(dlvM+(dx<0?1:-1));else openDlv(dlvIx+(dx<0?1:-1));});
 $('dlvDesign').onclick=()=>{const r=dlvList[dlvIx]||{},c=(r.category||'')+' '+(r.title||''),n=norm(c);
   const m=/muñec|munec|amigur|peluch|sonaj/.test(n)?'muneco':/caja|set|kit/.test(n)?'caja':/llaver/.test(n)?'llavero':'ropa';
-  closeDlv();st.mode=m;renderItems();setMode(m,true);goDesign();};
+  _closeDlvH();if(history.state&&history.state.dlv)history.replaceState(null,'',location.href);st.mode=m;renderItems();setMode(m,true);goDesign();};
 
 /* videos de la galería: se reproducen solos (sin sonido) cuando se ven en pantalla */
 const dlvIO='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.muted=true;const p=v.play();if(p)p.catch(()=>{});}else v.pause();}),{threshold:.35}):null;
 function dlvWatch(){document.querySelectorAll('#dlvGrid video.dlv-v').forEach(v=>{v.muted=true;if(dlvIO)dlvIO.observe(v);else v.play().catch(()=>{});});}
 const _renderDeliveredV=renderDelivered;renderDelivered=function(f){_renderDeliveredV(f);dlvWatch();};
+/* celular: el botón “atrás” cierra la foto en grande en vez de salir de la página */
+const _openDlvH=openDlv;openDlv=function(i){const was=$('dlvBox').classList.contains('open');_openDlvH(i);if(!was&&!(history.state&&history.state.dlv))history.pushState({dlv:1},'',location.href);};
+const _closeDlvH=closeDlv;closeDlv=function(fromPop){if(!$('dlvBox').classList.contains('open'))return;_closeDlvH();if(fromPop!==true&&history.state&&history.state.dlv)history.back();};
+$('dlvClose').onclick=()=>closeDlv();
+window.addEventListener('popstate',()=>{if($('dlvBox').classList.contains('open')&&!(history.state&&history.state.dlv))closeDlv(true);});
 
 /* ════════════ PESTAÑAS: Catálogo · Entregados · Diseña en 3D ════════════ */
 const PTABS=['catalogo','entregados','disena'];let curTab='catalogo';
@@ -3389,7 +3395,9 @@ function showTab(t,opt){
   if(opt.scroll!==false){const bar=$('ptabs'),top=bar.getBoundingClientRect().top+scrollY-($('mainHeader').offsetHeight||0)-4;if(scrollY>top||opt.scroll===true)window.scrollTo({top,behavior:'smooth'});}
   updateBar();
 }
-$('ptabs').addEventListener('click',e=>{const b=e.target.closest('[data-ptab]');if(b)showTab(b.dataset.ptab,{scroll:true});});
+$('ptabs').addEventListener('click',e=>{const b=e.target.closest('[data-ptab]');if(!b)return;showTab(b.dataset.ptab,{scroll:true});
+  // en el celular el diseñador se abre directo en pantalla completa
+  if(b.dataset.ptab==='disena'&&isPhone())openDesigner();});
 // enlaces del menú, botones y pie de página → cambian de pestaña
 document.addEventListener('click',e=>{const a=e.target.closest('a[href="#catalogo"],a[href="#entregados"],a[href="#disena"]');if(!a)return;
   const t=a.getAttribute('href').slice(1);e.preventDefault();closeMobileMenu();
@@ -3462,7 +3470,7 @@ function handleHash(){
 }
 const startHash=location.hash;
 loadData().then(handleHash);loadDelivered().then(()=>{const t=startHash.slice(1);if(t==='entregados'||t==='disena')showTab(t,{scroll:true,keepHash:true});});
-if(startHash==='#disena')showTab('disena',{scroll:true,keepHash:true});
+if(startHash==='#disena'){showTab('disena',{scroll:true,keepHash:true});if(isPhone())openDesigner();}
 window.addEventListener('hashchange',handleHash);
 // Si el cliente vuelve a la pestaña después de un rato, se actualizan precios y stock
 let lastLoad=Date.now();document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&Date.now()-lastLoad>120000){lastLoad=Date.now();loadData();}});
